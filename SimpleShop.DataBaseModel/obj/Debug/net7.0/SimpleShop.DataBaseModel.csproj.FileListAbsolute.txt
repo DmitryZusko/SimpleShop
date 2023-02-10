@@ -1,0 +1,14 @@
+C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.DataBaseModel\bin\Debug\net7.0\SimpleShop.DataBaseModel.deps.json
+C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.DataBaseModel\bin\Debug\net7.0\SimpleShop.DataBaseModel.runtimeconfig.json
+C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.DataBaseModel\bin\Debug\net7.0\SimpleShop.DataBaseModel.dll
+C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.DataBaseModel\bin\Debug\net7.0\SimpleShop.DataBaseModel.pdb
+C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.DataBaseModel\obj\Debug\net7.0\SimpleShop.DataBaseModel.csproj.AssemblyReference.cache
+C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.DataBaseModel\obj\Debug\net7.0\SimpleShop.DataBaseModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.DataBaseModel\obj\Debug\net7.0\SimpleShop.DataBaseModel.AssemblyInfoInputs.cache
+C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.DataBaseModel\obj\Debug\net7.0\SimpleShop.DataBaseModel.AssemblyInfo.cs
+C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.DataBaseModel\obj\Debug\net7.0\SimpleShop.DataBaseModel.csproj.CoreCompileInputs.cache
+C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.DataBaseModel\obj\Debug\net7.0\SimpleShop.DataBaseModel.dll
+C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.DataBaseModel\obj\Debug\net7.0\refint\SimpleShop.DataBaseModel.dll
+C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.DataBaseModel\obj\Debug\net7.0\SimpleShop.DataBaseModel.pdb
+C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.DataBaseModel\obj\Debug\net7.0\SimpleShop.DataBaseModel.genruntimeconfig.cache
+C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.DataBaseModel\obj\Debug\net7.0\ref\SimpleShop.DataBaseModel.dll
