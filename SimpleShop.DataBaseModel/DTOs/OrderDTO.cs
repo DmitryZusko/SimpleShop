@@ -5,6 +5,7 @@ namespace SimpleShop.DataBaseModel.DTOs
     public class OrderDTO
     {
         public int ID { get; set; }
+        [Column(TypeName = "SMALLDATETIME ")]
         public DateTime OrderDate { get; set; }
         [Column(TypeName = "decimal(16,3)")]
         public decimal Amount { get; set; }

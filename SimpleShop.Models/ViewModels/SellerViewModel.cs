@@ -20,9 +20,8 @@ namespace SimpleShop.Models.ViewModels
         public ICommand SubmitCommand { get; }
         public ICommand CancelCommand { get; }
 
-        public SellerViewModel(Seller seller, NavigationService navigationService) : base(navigationService)
+        public SellerViewModel(NavigationService navigationService, SimpleShopEntity simpleShop) : base(navigationService, simpleShop)
         {
-            _seller = seller;
             CancelCommand = new CancelCommand(NavigationService);
         }
     }

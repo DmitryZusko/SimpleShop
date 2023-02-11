@@ -1,13 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "fM8X5dkTNu0TKOQejL1ywVmFyEhTVBufj5NB3IJG3l+Xoiua3p/toKsW2Odonz/xnb6O+5xTULiju4mCzc1RxQ==",
+  "dgSpecHash": "AVCdjjCvhHWoTLN1ULWtNQlsYi/GEfjtOa2L/kCNsKgkct39u5R2jaBnSkfJwtugv4FVa3/QsxE7V8h6bJf1vw==",
   "success": true,
   "projectFilePath": "D:\\Projects\\SimpleShop\\SimpleShop\\SimpleShop.UI\\SimpleShop.UI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\googl\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\googl\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\googl\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\googl\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
-    "C:\\Users\\googl\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\googl\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\googl\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.1\\microsoft.data.sqlclient.5.0.1.nupkg.sha512",
     "C:\\Users\\googl\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\5.0.1\\microsoft.data.sqlclient.sni.runtime.5.0.1.nupkg.sha512",
     "C:\\Users\\googl\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.2\\microsoft.entityframeworkcore.7.0.2.nupkg.sha512",

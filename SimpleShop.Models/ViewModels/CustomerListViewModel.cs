@@ -1,4 +1,5 @@
 ﻿using SimpleShop.Models.Commands;
+using SimpleShop.Models.Models;
 using SimpleShop.Models.Services;
 using SimpleShop.Models.Stores;
 using System.Collections.ObjectModel;
@@ -17,7 +18,7 @@ namespace SimpleShop.Models.ViewModels
         public ICommand AddNewCustomerCommand { get; }
         public ICommand UpdateCustomerCommand { get; }
         public ICommand DeleteCustomerCommand { get; }
-        public CustomerListViewModel(NavigationService navigationService) : base(navigationService) 
+        public CustomerListViewModel(NavigationService navigationService, SimpleShopEntity simpleShop) : base(navigationService, simpleShop) 
         {
             ShowSellersCommand = new ShowSellersCommand(NavigationService, CreateSellerListViewModel);
             ShowCustomersCommand = new ShowCustomersCommand(NavigationService, CreateCustomerListViewModel);

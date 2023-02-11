@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SimpleShop.Models.Models
 {
-    public class Seller
+    public class Seller : IModel
     {
         public int ID { get; set; }
         public string FirstName { get; set; }

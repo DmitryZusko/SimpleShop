@@ -1,11 +1,12 @@
-﻿using SimpleShop.Models.Services;
+﻿using SimpleShop.Models.Models;
+using SimpleShop.Models.Services;
 
 namespace SimpleShop.Models.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {
         public ViewModelBase CurrentViewModel { get; set; }
-        public MainViewModel(NavigationService navigationService) : base(navigationService)
+        public MainViewModel(NavigationService navigationService, SimpleShopEntity simpleShop) : base(navigationService, simpleShop)
         {
             NavigationService.CreateViewModel(CreateSellerListViewModel);
             CurrentViewModel = NavigationService.GetCurrentViewmodel();

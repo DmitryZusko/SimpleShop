@@ -83,3 +83,4 @@ D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\U
 D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\UpdateSellerViewControl.g.cs
 D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\UpdateCustomerViewControl.baml
 D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\UpdateSellerViewControl.baml
+D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\bin\Debug\net7.0-windows\AutoMapper.dll

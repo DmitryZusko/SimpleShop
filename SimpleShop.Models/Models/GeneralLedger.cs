@@ -1,29 +1,37 @@
-﻿namespace SimpleShop.Models.Models
+﻿using SimpleShop.Models.Services.DatabaseProviders;
+
+namespace SimpleShop.Models.Models
 {
     public class GeneralLedger
     {
         private List<Seller> _sellers;
         private List<Customer> _customers;
         private List<Order> _orders;
+        private readonly SellersDatabaseProvider _sellerProvider;
+        private readonly CustomerDatabaseProvider _customersProvider;
+        private readonly OrderDatabaseProvider _ordersProvider;
 
         public GeneralLedger()
         {
-            _sellers = new List<Seller>();
-            _customers = new List<Customer>();
-            _orders = new List<Order>();
+            _sellerProvider = new SellersDatabaseProvider();
+            _customersProvider = new CustomerDatabaseProvider();
+            _ordersProvider = new OrderDatabaseProvider();
+            _sellers = _sellerProvider.LoadTable();
+            _customers = _customersProvider.LoadTable();
+            _orders = _ordersProvider.LoadTable();
         }
 
-        public IEnumerable<Seller> GetSellersList()
+        public List<Seller> GetSellersList()
         {
             return _sellers;
         }
 
-        public IEnumerable<Customer> GetCustomersList()
+        public List<Customer> GetCustomersList()
         {
             return _customers;
         }
 
-        public IEnumerable<Order> GetOrdersList()
+        public List<Order> GetOrdersList()
         {
             return _orders;
         }
