@@ -7,7 +7,45 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\AddNewCustomerViewControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\AddNewOrderViewControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\AddNewSellerViewControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\OrderDetailedInfoViewControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\TestWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\UpdateOrderViewControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AddNewCustomerViewControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AddNewOrderViewControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AddNewSellerViewControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\OrderDetailedInfoViewControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\TestWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\UpdateOrderViewControl.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

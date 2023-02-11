@@ -1,10 +1,5 @@
-﻿using SimpleShop.Models.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using SimpleShop.Models.Stores;
+using SimpleShop.Models.ViewModels;
 using System.Windows;
 
 namespace SimpleShop.UI
@@ -14,11 +9,18 @@ namespace SimpleShop.UI
     /// </summary>
     public partial class App : Application
     {
+        private readonly NavigationStore _navigationStore;
+        private readonly ViewModelBase _mainViewModel;
+        public App()
+        {
+            _navigationStore = new NavigationStore();
+        }
         protected override void OnStartup(StartupEventArgs e)
         {
+            _navigationStore.CurrentViewModel = new SellerListViewModel(_navigationStore);
             MainWindow = new MainWindow
             {
-                DataContext = new GeneralLedgerViewModel()
+                DataContext = new MainViewModel(_navigationStore)
             };
             MainWindow.Show();
             base.OnStartup(e);

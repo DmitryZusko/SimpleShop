@@ -1,11 +1,20 @@
-﻿namespace SimpleShop.Models.ViewModels
+﻿using SimpleShop.Models.Stores;
+
+namespace SimpleShop.Models.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {
-        public ViewModelBase CurrentViewModel { get; }
-        public MainViewModel()
+        private readonly NavigationStore _navigationStore;
+        public ViewModelBase CurrentViewModel => _navigationStore.CurrentViewModel;
+        public MainViewModel(NavigationStore navigationStore)
         {
-            CurrentViewModel = new GeneralLedgerViewModel();
+            _navigationStore = navigationStore;
+            _navigationStore.CurrentViewModelChanged += _navigationStore_CurrentViewModelChanged;
+        }
+
+        private void _navigationStore_CurrentViewModelChanged()
+        {
+            OnPropertyChanged(nameof(CurrentViewModel));
         }
     }
 }

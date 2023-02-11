@@ -5,11 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SimpleShop.UI"
         xmlns:views="clr-namespace:SimpleShop.UI.Views"
+        xmlns:vms="clr-namespace:SimpleShop.Models.ViewModels;assembly=SimpleShop.Models"
         mc:Ignorable="d"
         Title="Simple Shop"
         FontSize="24"
         Height="450" Width="800">
     <Grid Margin="25, 25, 25, 25">
-        <views:SellerViewControl/>
+        <Grid.Resources>
+            <DataTemplate DataType="{x:Type vms:SellerListViewModel}">
+                <views:SellerViewControl/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vms:CustomerListViewModel}">
+                <views:CustomerViewControl/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vms:OrderListViewModel}">
+                <views:OrderViewControl/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vms:SellerViewModel}">
+                <views:AddNewSellerViewControl/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vms:CustomerViewModel}">
+                <views:AddNewCustomerViewControl/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vms:OrderViewModel}">
+                <views:AddNewOrderViewControl/>
+            </DataTemplate>
+        </Grid.Resources>
+
+        <ContentControl Content="{Binding CurrentViewModel}"/>
+        
     </Grid>
 </Window>

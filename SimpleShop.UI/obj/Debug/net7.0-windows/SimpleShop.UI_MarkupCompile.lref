@@ -1,7 +1,13 @@
-﻿
+﻿D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\GeneratedInternalTypeHelper.g.cs
 
 FD:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\MainWindow.xaml;;
+FD:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\Views\AddNewCustomerViewControl.xaml;;
+FD:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\Views\AddNewOrderViewControl.xaml;;
+FD:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\Views\AddNewSellerViewControl.xaml;;
 FD:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\Views\CustomerViewControl.xaml;;
-FD:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\Views\OrderViewcontrol.xaml;;
-FD:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\Views\SelllerViewControl.xaml;;
+FD:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\Views\OrderDetailedInfoViewControl.xaml;;
+FD:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\Views\OrderViewControl.xaml;;
+FD:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\Views\SellerViewControl.xaml;;
+FD:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\Views\TestWindow.xaml;;
+FD:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\Views\UpdateOrderViewControl.xaml;;
 

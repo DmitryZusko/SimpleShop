@@ -10,3 +10,6 @@ D:\Projects\SimpleShop\SimpleShop\SimpleShop.Models\obj\Debug\net7.0\SimpleShop.
 D:\Projects\SimpleShop\SimpleShop\SimpleShop.Models\obj\Debug\net7.0\refint\SimpleShop.Models.dll
 D:\Projects\SimpleShop\SimpleShop\SimpleShop.Models\obj\Debug\net7.0\SimpleShop.Models.pdb
 D:\Projects\SimpleShop\SimpleShop\SimpleShop.Models\obj\Debug\net7.0\ref\SimpleShop.Models.dll
+D:\Projects\SimpleShop\SimpleShop\SimpleShop.Models\bin\Debug\net7.0\SimpleShop.DataBaseModel.dll
+D:\Projects\SimpleShop\SimpleShop\SimpleShop.Models\bin\Debug\net7.0\SimpleShop.DataBaseModel.pdb
+D:\Projects\SimpleShop\SimpleShop\SimpleShop.Models\obj\Debug\net7.0\SimpleShop.Models.csproj.CopyComplete

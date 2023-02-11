@@ -18,9 +18,9 @@ namespace SimpleShop.UI.Views
     /// <summary>
     /// Interaction logic for OrderViewcontrol.xaml
     /// </summary>
-    public partial class OrderViewcontrol : UserControl
+    public partial class OrderViewControl : UserControl
     {
-        public OrderViewcontrol()
+        public OrderViewControl()
         {
             InitializeComponent();
         }

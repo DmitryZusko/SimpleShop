@@ -1,11 +1,12 @@
-﻿using System.Windows.Input;
+﻿using SimpleShop.Models.Commands;
+using SimpleShop.Models.Stores;
+using System.Windows.Input;
 
 namespace SimpleShop.Models.ViewModels
 {
     public class CustomerViewModel : ViewModelBase
     {
         private int _id;
-
         public int ID
         {
             get { return _id; }
@@ -17,7 +18,6 @@ namespace SimpleShop.Models.ViewModels
         }
 
         private string _companyName;
-
         public string CompanyName
         {
             get { return _companyName; }
@@ -30,5 +30,13 @@ namespace SimpleShop.Models.ViewModels
 
         public ICommand SubmitCommand { get;}
         public ICommand CancelCommand { get;}
+
+        private readonly NavigationStore _navigationStore;
+
+        public CustomerViewModel(NavigationStore navigationStore)
+        {
+            _navigationStore = navigationStore;
+            CancelCommand = new CancelCommand(_navigationStore);
+        }
     }
 }
