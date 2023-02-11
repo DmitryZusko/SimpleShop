@@ -1,5 +1,6 @@
 ﻿using SimpleShop.Models.Commands;
 using SimpleShop.Models.Models;
+using SimpleShop.Models.Services;
 using SimpleShop.Models.Stores;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
@@ -16,15 +17,13 @@ namespace SimpleShop.Models.ViewModels
         public int ID { get; }
 
         public string FullName => $"{_firstName} {_lastName}";
-        private readonly NavigationStore _navigationStore;
         public ICommand SubmitCommand { get; }
         public ICommand CancelCommand { get; }
 
-        public SellerViewModel(Seller seller, NavigationStore navigationStore)
+        public SellerViewModel(Seller seller, NavigationService navigationService) : base(navigationService)
         {
             _seller = seller;
-            _navigationStore = navigationStore;
-            CancelCommand = new CancelCommand(_navigationStore);
+            CancelCommand = new CancelCommand(NavigationService);
         }
     }
 }

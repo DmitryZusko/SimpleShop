@@ -1,4 +1,5 @@
 ﻿using SimpleShop.Models.Commands;
+using SimpleShop.Models.Services;
 using SimpleShop.Models.Stores;
 using System.Windows.Input;
 
@@ -43,11 +44,9 @@ namespace SimpleShop.Models.ViewModels
 
         public ICommand SubmitCommand { get; }
         public ICommand CancelCommand { get; }
-        private readonly NavigationStore _navigationStore;
-        public OrderViewModel(NavigationStore navigationStore)
+        public OrderViewModel(NavigationService navigationService) : base(navigationService)
         {
-            _navigationStore = navigationStore;
-            CancelCommand = new CancelCommand(_navigationStore);
+            CancelCommand = new CancelCommand(NavigationService);
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using SimpleShop.Models.Commands;
+using SimpleShop.Models.Services;
 using SimpleShop.Models.Stores;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
@@ -16,17 +17,21 @@ namespace SimpleShop.Models.ViewModels
         public ICommand AddNewOrderCommand { get; }
         public ICommand UpdateOrderCommand { get; }
         public ICommand DeleteOrderCommand { get; }
-        private readonly NavigationStore _navigationStore;
-        public OrderListViewModel(NavigationStore navigationStore)
+        public OrderListViewModel(NavigationService navigationService) : base(navigationService)
         {
-            _navigationStore = navigationStore;
-            ShowSellersCommand = new ShowSellersCommand(_navigationStore);
-            ShowCustomersCommand = new ShowCustomersCommand(_navigationStore);
-            ShowOrdersCommand = new ShowOrdersCommand(_navigationStore);
-            ShowOrderFullInfoCommand = new ShowOrderFullInfoCommand(_navigationStore);
-            AddNewOrderCommand = new AddNewOrderCommand(_navigationStore);
-            UpdateOrderCommand = new UpdateOrderCommand(_navigationStore);
-            DeleteOrderCommand = new DeleteOrderCommand(_navigationStore);
+            NavigationService = navigationService;
+            ShowSellersCommand = new ShowSellersCommand(NavigationService, CreateSellerListViewModel);
+            ShowCustomersCommand = new ShowCustomersCommand(NavigationService, CreateCustomerListViewModel);
+            ShowOrdersCommand = new ShowOrdersCommand(NavigationService, CreateOrderListViewModel);
+            //ShowOrderFullInfoCommand = new ShowOrderFullInfoCommand(_navigationService);
+            AddNewOrderCommand = new AddNewOrderCommand(NavigationService, CreateOrderViewModel);
+            UpdateOrderCommand = new UpdateOrderCommand(NavigationService, CreateOrderViewModel);
+            //DeleteOrderCommand = new DeleteOrderCommand(_navigationService);
+        }
+
+        public override bool NavigationStoreShouldStore()
+        {
+            return true;
         }
     }
 }

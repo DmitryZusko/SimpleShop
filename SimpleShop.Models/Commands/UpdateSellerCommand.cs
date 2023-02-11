@@ -1,4 +1,6 @@
-﻿using SimpleShop.Models.Stores;
+﻿using SimpleShop.Models.Services;
+using SimpleShop.Models.Stores;
+using SimpleShop.Models.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,16 +11,18 @@ namespace SimpleShop.Models.Commands
 {
     internal class UpdateSellerCommand : CommandBase
     {
-        private NavigationStore _navigationStore;
+        private NavigationService _navigationService;
+        private Func<ViewModelBase> _sellerViewModel;
 
-        public UpdateSellerCommand(NavigationStore navigationStore)
+        public UpdateSellerCommand(NavigationService navigationService, Func<ViewModelBase> sellerViewModel)
         {
-            _navigationStore = navigationStore;
+            _navigationService = navigationService;
+            _sellerViewModel = sellerViewModel;
         }
 
         public override void Execute(object? parameter)
         {
-            throw new NotImplementedException();
+            _navigationService.CreateViewModel(_sellerViewModel);
         }
     }
 }

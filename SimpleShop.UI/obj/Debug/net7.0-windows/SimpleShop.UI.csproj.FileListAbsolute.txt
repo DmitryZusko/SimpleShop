@@ -79,3 +79,7 @@ D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\O
 D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\UpdateOrderViewControl.g.cs
 D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\OrderDetailedInfoViewControl.baml
 D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\UpdateOrderViewControl.baml
+D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\UpdateCustomerViewControl.g.cs
+D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\UpdateSellerViewControl.g.cs
+D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\UpdateCustomerViewControl.baml
+D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\UpdateSellerViewControl.baml

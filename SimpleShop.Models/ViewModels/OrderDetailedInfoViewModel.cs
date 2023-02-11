@@ -1,4 +1,5 @@
-﻿using SimpleShop.Models.Stores;
+﻿using SimpleShop.Models.Services;
+using SimpleShop.Models.Stores;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -68,7 +69,7 @@ namespace SimpleShop.Models.ViewModels
             }
         }
 
-        public OrderDetailedInfoViewModel(NavigationStore navigationStore)
+        public OrderDetailedInfoViewModel(NavigationService navigationService) : base(navigationService)
         {
 
         }

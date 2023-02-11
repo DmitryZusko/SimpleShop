@@ -1,18 +1,22 @@
-﻿using SimpleShop.Models.Stores;
+﻿using SimpleShop.Models.Services;
+using SimpleShop.Models.Stores;
 using SimpleShop.Models.ViewModels;
 
 namespace SimpleShop.Models.Commands
 {
     public class ShowCustomersCommand : CommandBase
     {
-        private readonly NavigationStore _navigationStore;
-        public ShowCustomersCommand(NavigationStore navigationStore)
+        private readonly NavigationService _navigationService;
+        private readonly Func<ViewModelBase> _createCustomerListViewModel;
+
+        public ShowCustomersCommand(NavigationService navigationStore, Func<ViewModelBase> createCustomerListViewModel)
         {
-            _navigationStore = navigationStore;
+            _navigationService = navigationStore;
+            _createCustomerListViewModel = createCustomerListViewModel;
         }
         public override void Execute(object? parameter)
         {
-            _navigationStore.CurrentViewModel = new CustomerListViewModel(_navigationStore);
+            _navigationService.CreateViewModel(_createCustomerListViewModel);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using SimpleShop.Models.Stores;
+﻿using SimpleShop.Models.Services;
+using SimpleShop.Models.Stores;
 using SimpleShop.Models.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -10,16 +11,18 @@ namespace SimpleShop.Models.Commands
 {
     internal class AddNewSellerCommand : CommandBase
     {
-        private NavigationStore _navigationStore;
+        private NavigationService _navigationService;
+        private Func<ViewModelBase> _sellerViewModel;
 
-        public AddNewSellerCommand(NavigationStore navigationStore)
+        public AddNewSellerCommand(NavigationService navigationService, Func<ViewModelBase> sellerViewModel)
         {
-            _navigationStore = navigationStore;
+            _navigationService = navigationService;
+            _sellerViewModel = sellerViewModel;
         }
 
         public override void Execute(object? parameter)
         {
-            _navigationStore.CurrentViewModel = new SellerViewModel(null, _navigationStore);
+            _navigationService.CreateViewModel(_sellerViewModel);
         }
     }
 }

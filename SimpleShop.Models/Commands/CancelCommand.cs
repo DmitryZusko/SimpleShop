@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using SimpleShop.Models.Services;
 using SimpleShop.Models.Stores;
 using System;
 using System.Collections.Generic;
@@ -10,15 +11,15 @@ namespace SimpleShop.Models.Commands
 {
     public class CancelCommand : CommandBase
     {
-        private readonly NavigationStore _navigationStore;
-        public CancelCommand(NavigationStore navigationStore)
+        private readonly NavigationService _navigationService;
+        public CancelCommand(NavigationService navigationService)
         {
-            _navigationStore = navigationStore;
+            _navigationService = navigationService;
         }
 
         public override void Execute(object? parameter)
         {
-            _navigationStore.ReturnToPreviousViewModel();
+            _navigationService.ReturnToPreviousViewModel();
         }
     }
 }

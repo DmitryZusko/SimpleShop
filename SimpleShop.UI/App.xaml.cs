@@ -1,4 +1,4 @@
-﻿using SimpleShop.Models.Stores;
+﻿using SimpleShop.Models.Services;
 using SimpleShop.Models.ViewModels;
 using System.Windows;
 
@@ -9,18 +9,18 @@ namespace SimpleShop.UI
     /// </summary>
     public partial class App : Application
     {
-        private readonly NavigationStore _navigationStore;
         private readonly ViewModelBase _mainViewModel;
+        private readonly NavigationService _navigationService;
         public App()
         {
-            _navigationStore = new NavigationStore();
+            _navigationService = new NavigationService();
+            _mainViewModel = new MainViewModel(_navigationService);
         }
         protected override void OnStartup(StartupEventArgs e)
         {
-            _navigationStore.CurrentViewModel = new SellerListViewModel(_navigationStore);
             MainWindow = new MainWindow
             {
-                DataContext = new MainViewModel(_navigationStore)
+                DataContext = _mainViewModel
             };
             MainWindow.Show();
             base.OnStartup(e);

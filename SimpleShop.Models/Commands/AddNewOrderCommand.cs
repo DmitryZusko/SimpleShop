@@ -1,20 +1,23 @@
-﻿using SimpleShop.Models.Stores;
+﻿using SimpleShop.Models.Services;
+using SimpleShop.Models.Stores;
 using SimpleShop.Models.ViewModels;
 
 namespace SimpleShop.Models.Commands
 {
     internal class AddNewOrderCommand : CommandBase
     {
-        private readonly NavigationStore _navigationStore;
+        private readonly NavigationService _navigationService;
+        private readonly Func<ViewModelBase> _createOrderViewModel;
 
-        public AddNewOrderCommand(NavigationStore navigationStore)
+        public AddNewOrderCommand(NavigationService navigationService, Func<ViewModelBase> createOrderViewModel)
         {
-            _navigationStore = navigationStore;
+            _navigationService = navigationService;
+            _createOrderViewModel = createOrderViewModel;
         }
 
         public override void Execute(object? parameter)
         {
-            _navigationStore.CurrentViewModel = new OrderViewModel(_navigationStore);
+            _navigationService.CreateViewModel(_createOrderViewModel);
         }
     }
 }

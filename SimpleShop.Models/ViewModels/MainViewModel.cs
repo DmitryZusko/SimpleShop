@@ -1,19 +1,20 @@
-﻿using SimpleShop.Models.Stores;
+﻿using SimpleShop.Models.Services;
 
 namespace SimpleShop.Models.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {
-        private readonly NavigationStore _navigationStore;
-        public ViewModelBase CurrentViewModel => _navigationStore.CurrentViewModel;
-        public MainViewModel(NavigationStore navigationStore)
+        public ViewModelBase CurrentViewModel { get; set; }
+        public MainViewModel(NavigationService navigationService) : base(navigationService)
         {
-            _navigationStore = navigationStore;
-            _navigationStore.CurrentViewModelChanged += _navigationStore_CurrentViewModelChanged;
+            NavigationService.CreateViewModel(CreateSellerListViewModel);
+            CurrentViewModel = NavigationService.GetCurrentViewmodel();
+            NavigationService.CurrentViewModelChanged += _navigationService_CurrentViewModelChanged;
         }
 
-        private void _navigationStore_CurrentViewModelChanged()
+        private void _navigationService_CurrentViewModelChanged()
         {
+            CurrentViewModel = NavigationService.GetCurrentViewmodel();
             OnPropertyChanged(nameof(CurrentViewModel));
         }
     }
