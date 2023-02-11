@@ -12,16 +12,16 @@ namespace SimpleShop.UI
     {
         private readonly ViewModelBase _mainViewModel;
         private readonly NavigationService _navigationService;
-        public SimpleShopEntity SimpleShop { get; set; }
+        private readonly SimpleShopEntity _simpleShop;
         public App()
         {
-            SimpleShop = new SimpleShopEntity();
             _navigationService = new NavigationService();
-            _mainViewModel = new MainViewModel(_navigationService, SimpleShop);
+            _simpleShop = new SimpleShopEntity();
+            _navigationService = new NavigationService();
+            _mainViewModel = new MainViewModel(_navigationService, _simpleShop);
         }
         protected override void OnStartup(StartupEventArgs e)
         {
-            SimpleShop = new SimpleShopEntity();
             MainWindow = new MainWindow
             {
                 DataContext = _mainViewModel

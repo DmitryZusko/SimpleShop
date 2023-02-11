@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\App.xaml
-12-664929300
+11-85437169
 
-14-2002418143
+131870551630
 2291084073194
-MainWindow.xaml;Views\AddNewCustomerViewControl.xaml;Views\AddNewOrderViewControl.xaml;Views\AddNewSellerViewControl.xaml;Views\CustomerViewControl.xaml;Views\OrderDetailedInfoViewControl.xaml;Views\OrderViewControl.xaml;Views\SellerViewControl.xaml;Views\TestWindow.xaml;Views\UpdateCustomerViewControl.xaml;Views\UpdateOrderViewControl.xaml;Views\UpdateSellerViewControl.xaml;
+MainWindow.xaml;Views\AddViews\AddNewCustomerViewControl.xaml;Views\AddViews\AddNewOrderViewControl.xaml;Views\AddViews\AddNewSellerViewControl.xaml;Views\ListViews\CustomerViewControl.xaml;Views\ListViews\OrderViewControl.xaml;Views\ListViews\SellerViewControl.xaml;Views\TestWindow.xaml;Views\UpdateViews\UpdateCustomerViewControl.xaml;Views\UpdateViews\UpdateOrderViewControl.xaml;Views\UpdateViews\UpdateSellerViewControl.xaml;
 
 False
 

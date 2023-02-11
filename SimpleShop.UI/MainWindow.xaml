@@ -5,29 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SimpleShop.UI"
         xmlns:views="clr-namespace:SimpleShop.UI.Views"
-        xmlns:vms="clr-namespace:SimpleShop.Models.ViewModels;assembly=SimpleShop.Models"
+        xmlns:lvms="clr-namespace:SimpleShop.Models.ViewModels.ListViewModels;assembly=SimpleShop.Models"
+        xmlns:svms="clr-namespace:SimpleShop.Models.ViewModels.SingleEntityViewModel;assembly=SimpleShop.Models"
         mc:Ignorable="d"
         Title="Simple Shop"
         FontSize="24"
         Height="450" Width="800">
     <Grid Margin="25, 25, 25, 25">
         <Grid.Resources>
-            <DataTemplate DataType="{x:Type vms:SellerListViewModel}">
+            <DataTemplate DataType="{x:Type lvms:SellerListViewModel}">
                 <views:SellerViewControl/>
             </DataTemplate>
-            <DataTemplate DataType="{x:Type vms:CustomerListViewModel}">
+            <DataTemplate DataType="{x:Type lvms:CustomerListViewModel}">
                 <views:CustomerViewControl/>
             </DataTemplate>
-            <DataTemplate DataType="{x:Type vms:OrderListViewModel}">
+            <DataTemplate DataType="{x:Type lvms:OrderListViewModel}">
                 <views:OrderViewControl/>
             </DataTemplate>
-            <DataTemplate DataType="{x:Type vms:SellerViewModel}">
+            <DataTemplate DataType="{x:Type svms:SingleSellerViewModel}">
                 <views:AddNewSellerViewControl/>
             </DataTemplate>
-            <DataTemplate DataType="{x:Type vms:CustomerViewModel}">
+            <DataTemplate DataType="{x:Type svms:SingleCustomerViewModel}">
                 <views:AddNewCustomerViewControl/>
             </DataTemplate>
-            <DataTemplate DataType="{x:Type vms:OrderViewModel}">
+            <DataTemplate DataType="{x:Type svms:SingleOrderViewModel}">
                 <views:AddNewOrderViewControl/>
             </DataTemplate>
         </Grid.Resources>

@@ -7,28 +7,25 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Views\AddNewCustomerViewControl.xaml.cs">
+    <Compile Update="Views\AddViews\AddNewCustomerViewControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\AddNewOrderViewControl.xaml.cs">
+    <Compile Update="Views\AddViews\AddNewOrderViewControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\AddNewSellerViewControl.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Views\OrderDetailedInfoViewControl.xaml.cs">
+    <Compile Update="Views\AddViews\AddNewSellerViewControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\TestWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\UpdateCustomerViewControl.xaml.cs">
+    <Compile Update="Views\UpdateViews\UpdateCustomerViewControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\UpdateOrderViewControl.xaml.cs">
+    <Compile Update="Views\UpdateViews\UpdateOrderViewControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\UpdateSellerViewControl.xaml.cs">
+    <Compile Update="Views\UpdateViews\UpdateSellerViewControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -36,28 +33,25 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\AddNewCustomerViewControl.xaml">
+    <Page Update="Views\AddViews\AddNewCustomerViewControl.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\AddNewOrderViewControl.xaml">
+    <Page Update="Views\AddViews\AddNewOrderViewControl.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\AddNewSellerViewControl.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Views\OrderDetailedInfoViewControl.xaml">
+    <Page Update="Views\AddViews\AddNewSellerViewControl.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\TestWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\UpdateCustomerViewControl.xaml">
+    <Page Update="Views\UpdateViews\UpdateCustomerViewControl.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\UpdateOrderViewControl.xaml">
+    <Page Update="Views\UpdateViews\UpdateOrderViewControl.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\UpdateSellerViewControl.xaml">
+    <Page Update="Views\UpdateViews\UpdateSellerViewControl.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
