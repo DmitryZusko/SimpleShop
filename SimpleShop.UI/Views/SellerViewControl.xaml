@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="SimpleShop.UI.Views.SellerViewControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SimpleShop.UI.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Grid.IsSharedSizeScope="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto" SharedSizeGroup="UpperButtons"/>
+                <ColumnDefinition Width="auto" SharedSizeGroup="UpperButtons"/>
+                <ColumnDefinition Width="auto" SharedSizeGroup="UpperButtons"/>
+                <ColumnDefinition Width="auto" SharedSizeGroup="UpperButtons"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="0" Text="Sellers" FontSize="32"/>
+            <Button Grid.Column="1" Content="Sellers" Margin="10, 0, 5, 0" Command="{Binding ShowSellersCommand}"/>
+            <Button Grid.Column="2" Content="Customers" Margin="5, 0, 5, 0" Command="{Binding ShowCustomersCommand}"/>
+            <Button Grid.Column="3" Content="Orders" Margin="5, 0, 5, 0" Command="{Binding ShowOrdersCommand}"/>
+            <Button Grid.Column="4" Content="Full Info" Margin="25 0 10 0" Command="{Binding ShowOrderFullInfoCommand}"/>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <ListView Margin="0, 25, 0, 0" ItemsSource="Sellers">
+                <ListView.View>
+                    <GridView>
+                        
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" SharedSizeGroup="LowerButtons"/>
+                <ColumnDefinition Width="auto" SharedSizeGroup="LowerButtons"/>
+                <ColumnDefinition Width="auto" SharedSizeGroup="LowerButtons"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" Content="Add New" Margin="10, 25, 5, 0" Command="{Binding AddNewSellerCommand}"/>
+            <Button Grid.Column="1" Content="Update" Margin="5, 25, 5, 0" Command="{Binding UpdateSellerCommand}"/>
+            <Button Grid.Column="2" Content="Delete" Margin="5, 25, 10, 0" Command="{Binding DeleteSellerCommand}"/>
+        </Grid>
+    </Grid>
+</UserControl>
