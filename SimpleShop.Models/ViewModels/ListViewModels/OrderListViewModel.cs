@@ -1,6 +1,7 @@
 ﻿using SimpleShop.Models.Commands;
 using SimpleShop.Models.Models;
 using SimpleShop.Models.Services;
+using SimpleShop.Models.Services.ModelViewModelConverter;
 using SimpleShop.Models.Stores;
 using SimpleShop.Models.ViewModels.ClassViewModels;
 using SimpleShop.Models.ViewModels.SingleEntityViewModel;
@@ -11,7 +12,7 @@ namespace SimpleShop.Models.ViewModels.ListViewModels
 {
     public class OrderListViewModel : ViewModelCommandsBase
     {
-        public ObservableCollection<SellerViewModel> Orders { get; set; } = new ObservableCollection<SellerViewModel>();
+        public ObservableCollection<OrderViewModel> Orders { get; set; }
         public ICommand ShowSellersCommand { get; }
         public ICommand ShowCustomersCommand { get; }
         public ICommand ShowOrdersCommand { get; }
@@ -19,8 +20,14 @@ namespace SimpleShop.Models.ViewModels.ListViewModels
         public ICommand AddNewOrderCommand { get; }
         public ICommand UpdateOrderCommand { get; }
         public ICommand DeleteOrderCommand { get; }
+
+        private readonly MVMConverter _mvmConverter;
         public OrderListViewModel(NavigationService navigationService, SimpleShopEntity simpleShop) : base(navigationService, simpleShop)
         {
+            _mvmConverter = new MVMConverter();
+
+            Orders = _mvmConverter.FromModelToVM<Order, OrderViewModel>(_simpleShop.GetOrdersList());
+
             ShowSellersCommand = new ShowSellersCommand(_navigationService, CreateSellerListViewModel);
             ShowCustomersCommand = new ShowCustomersCommand(_navigationService, CreateCustomerListViewModel);
             ShowOrdersCommand = new ShowOrdersCommand(_navigationService, CreateOrderListViewModel);

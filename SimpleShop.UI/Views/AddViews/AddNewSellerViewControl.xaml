@@ -17,7 +17,7 @@
 
         <TextBlock Grid.Row="0" Text="NEW SELLER" FontSize="36" FontWeight="Bold"/>
         <TextBlock Grid.Row="1" Text="Seller Name" FontWeight="Bold" HorizontalAlignment="Center"/>
-        <!--<TextBox Grid.Row="2" Text="{Binding FullName}"/>-->
+        <TextBox Grid.Row="2" Text="{Binding FullName}"/>
 
         <Grid Grid.Row="3" HorizontalAlignment="Center">
             <Grid.ColumnDefinitions>

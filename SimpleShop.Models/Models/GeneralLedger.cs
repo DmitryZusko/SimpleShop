@@ -13,12 +13,12 @@ namespace SimpleShop.Models.Models
 
         public GeneralLedger()
         {
-            //_sellerProvider = new SellersDatabaseProvider();
-            //_customersProvider = new CustomerDatabaseProvider();
-            //_ordersProvider = new OrderDatabaseProvider();
-            //_sellers = _sellerProvider.LoadTable();
-            //_customers = _customersProvider.LoadTable();
-            //_orders = _ordersProvider.LoadTable();
+            _sellerProvider = new SellersDatabaseProvider();
+            _customersProvider = new CustomerDatabaseProvider();
+            _ordersProvider = new OrderDatabaseProvider();
+            _sellers = _sellerProvider.LoadTable();
+            _customers = _customersProvider.LoadTable();
+            _orders = _ordersProvider.LoadTable();
         }
 
         public List<Seller> GetSellersList()

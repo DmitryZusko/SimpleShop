@@ -3,6 +3,6 @@
     public class Customer : IModel
     {
         public int ID { get; set; }
-        public string CompanyName { get; set; }
+        public string Company { get; set; }
     }
 }

@@ -1,23 +1,17 @@
 ﻿using AutoMapper.QueryableExtensions;
 using SimpleShop.DataBaseModel.DBContext;
-using SimpleShop.Models.Mappers;
 using SimpleShop.Models.Models;
+using SimpleShop.Models.ViewModels.ClassViewModels;
 
 namespace SimpleShop.Models.Services.DatabaseProviders
 {
-    public class CustomerDatabaseProvider
+    public class CustomerDatabaseProvider : ProviderMapperBase
     {
-        private readonly QueryableMapper _mapper;
-        public CustomerDatabaseProvider()
-        {
-            _mapper = new QueryableMapper();
-        }
-
         public List<Customer> LoadTable()
         {
             using (var context = new DatabaseContext())
             {
-                return context.Customers.ProjectTo<Customer>(_mapper.config).ToList();
+                return context.Customers.ProjectTo<Customer>(QuerybleConfig).ToList();
             }
         }
     }

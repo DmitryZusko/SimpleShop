@@ -30,10 +30,24 @@
         </Grid>
 
         <Grid Grid.Row="1">
-            <ListView Margin="0, 25, 0, 0" ItemsSource="Customers">
+            <ListView Margin="0, 25, 0, 0" ItemsSource="{Binding Path = Customers}">
                 <ListView.View>
                     <GridView>
+                        <GridViewColumn Header="ID">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock HorizontalAlignment="Center" Text="{Binding ID}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
 
+                        <GridViewColumn Header="Company">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock HorizontalAlignment="Center" Text="{Binding Company}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
                     </GridView>
                 </ListView.View>
             </ListView>
