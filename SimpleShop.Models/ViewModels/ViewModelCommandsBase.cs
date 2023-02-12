@@ -32,6 +32,11 @@ namespace SimpleShop.Models.ViewModels
             return new OrderListViewModel(_navigationService, _simpleShop);
         }
 
+        public OrderFullInfoViewModel CreateFullOrderInfoViewModel()
+        {
+            return new OrderFullInfoViewModel(_navigationService, _simpleShop);
+        }
+
         public SingleSellerViewModel CreateSingleSellerViewModel()
         {
             return new SingleSellerViewModel(_navigationService, _simpleShop);

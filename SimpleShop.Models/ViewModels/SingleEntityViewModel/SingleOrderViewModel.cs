@@ -52,7 +52,7 @@ namespace SimpleShop.Models.ViewModels.SingleEntityViewModel
         public ICommand CancelCommand { get; }
         public SingleOrderViewModel(NavigationService navigationService, SimpleShopEntity simpleShop) : base(navigationService, simpleShop)
         {
-            SubmitCommand = new ConfirmNewOrderCommand(_navigationService, _simpleShop, new List<string> {Amount.ToString(), SellerID.ToString(), CustomerID.ToString()}, CreateOrderListViewModel, this);
+            SubmitCommand = new ConfirmNewOrderCommand(_navigationService, _simpleShop, new List<string> {Amount.ToString("#.###"), SellerID.ToString(), CustomerID.ToString()}, CreateOrderListViewModel, this);
             CancelCommand = new ShowOrdersCommand(_navigationService, CreateOrderListViewModel);
         }
     }

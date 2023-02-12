@@ -27,7 +27,7 @@ namespace SimpleShop.Models.Commands.ConfirmCommands
         {
             _orderInfo = new List<string>
             { 
-                _parentViewModel.Amount.ToString(),
+                _parentViewModel.Amount.ToString("#.###"),
                 _parentViewModel.SellerID.ToString(),
                 _parentViewModel.CustomerID.ToString()
             };

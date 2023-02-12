@@ -1,5 +1,6 @@
 ﻿using SimpleShop.Models.Commands;
 using SimpleShop.Models.Commands.DeleteCommands;
+using SimpleShop.Models.Commands.ShowCommands;
 using SimpleShop.Models.Models;
 using SimpleShop.Models.Services.Navigation;
 using System;
@@ -30,7 +31,7 @@ namespace SimpleShop.Models.ViewModels.DeleteViewModels
         public OrderDeleteViewModel(NavigationService navigationService, SimpleShopEntity simpleShop) : base(navigationService, simpleShop)
         {
             DeleteOrderCommand = new DeleteOrderCommand(_navigationService, _simpleShop, ID, CreateOrderListViewModel, this);
-            CancelCommand = new CancelCommand(_navigationService);
+            CancelCommand = new ShowOrdersCommand(_navigationService, CreateOrderListViewModel);
         }
     }
 }

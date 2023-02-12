@@ -33,7 +33,7 @@ namespace SimpleShop.Models.ViewModels.ListViewModels
             ShowSellersCommand = new ShowSellersCommand(_navigationService, CreateSellerListViewModel);
             ShowCustomersCommand = new ShowCustomersCommand(_navigationService, CreateCustomerListViewModel);
             ShowOrdersCommand = new ShowOrdersCommand(_navigationService, CreateOrderListViewModel);
-            //ShowOrderFullInfoCommand = new ShowOrderFullInfoCommand(_navigationService);
+            ShowOrderFullInfoCommand = new ShowOrderFullInfoCommand(_navigationService, CreateFullOrderInfoViewModel);
             AddNewOrderCommand = new AddNewOrderCommand(_navigationService, CreateSingleOrderViewModel);
             DeleteOrderCommand = new OpenCustomerDeleteMenuCommand(_navigationService, CreateOrderDeleteViewModel);
         }

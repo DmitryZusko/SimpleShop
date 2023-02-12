@@ -25,6 +25,9 @@
     <Compile Update="Views\DeleteViews\SellerDeleteControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\ListViews\OrderFullInfoViewControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\TestWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -49,6 +52,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\DeleteViews\SellerDeleteControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ListViews\OrderFullInfoViewControl.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\TestWindow.xaml">

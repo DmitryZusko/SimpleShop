@@ -1,23 +1,22 @@
-﻿using SimpleShop.Models.Stores;
+﻿using SimpleShop.Models.Services.Navigation;
+using SimpleShop.Models.Stores;
 using SimpleShop.Models.ViewModels.ListViewModels;
 
 namespace SimpleShop.Models.Commands.ShowCommands
 {
     public class ShowOrderFullInfoCommand : CommandBase
     {
-        private readonly NavigationStore _navigationStore;
-        public ShowOrderFullInfoCommand(NavigationStore navigationStore)
+        private readonly NavigationService _navigationService;
+        private readonly Func<OrderFullInfoViewModel> _newViewModel;
+
+        public ShowOrderFullInfoCommand(NavigationService navigationService, Func<OrderFullInfoViewModel> newViewModel)
         {
-            _navigationStore = navigationStore;
+            _navigationService = navigationService;
+            _newViewModel = newViewModel;
         }
         public override void Execute(object? parameter)
         {
-            throw new NotImplementedException();
-        }
-
-        public override bool CanExecute(object? parameter)
-        {
-            return _navigationStore.CurrentViewModel is OrderListViewModel;
+            _navigationService.CreateViewModel(_newViewModel);
         }
     }
 }

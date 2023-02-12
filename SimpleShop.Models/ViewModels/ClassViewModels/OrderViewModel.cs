@@ -26,9 +26,9 @@
 			}
 		}
 
-		private decimal _amount;
+		private string _amount;
 
-		public decimal Amount
+		public string Amount
 		{
 			get { return _amount; }
 			set 

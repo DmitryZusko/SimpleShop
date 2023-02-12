@@ -21,6 +21,7 @@ namespace SimpleShop.Models.Services.ModelViewModelConverter
                 cfg.CreateMap<Seller, SellerViewModel>().ReverseMap();
                 cfg.CreateMap<Customer, CustomerViewModel>().ReverseMap();
                 cfg.CreateMap<Order, OrderViewModel>().ReverseMap();
+                cfg.CreateMap<Order, FullOrderViewModel>().ReverseMap();
                 cfg.CreateMap<Seller, SellerDTO>().ReverseMap();
                 cfg.CreateMap<Customer, CustomerDTO>().ReverseMap();
                 cfg.CreateMap<Order, OrderDTO>().ReverseMap();

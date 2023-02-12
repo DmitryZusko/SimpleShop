@@ -26,7 +26,6 @@
             <Button Grid.Column="1" Content="Sellers" Margin="10, 0, 5, 0" Command="{Binding ShowSellersCommand}"/>
             <Button Grid.Column="2" Content="Customers" Margin="5, 0, 5, 0" Command="{Binding ShowCustomersCommand}"/>
             <Button Grid.Column="3" Content="Orders" Margin="5, 0, 5, 0" Command="{Binding ShowOrdersCommand}"/>
-            <Button Grid.Column="4" Content="Full Info" Margin="25 0 10 0" Command="{Binding ShowOrderFullInfoCommand}"/>
         </Grid>
 
         <Grid Grid.Row="1">
