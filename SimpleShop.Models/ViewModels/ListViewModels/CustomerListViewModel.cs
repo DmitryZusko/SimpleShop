@@ -1,5 +1,4 @@
-﻿using SimpleShop.Models.Commands;
-using SimpleShop.Models.Commands.AddNewCommands;
+﻿using SimpleShop.Models.Commands.AddNewCommands;
 using SimpleShop.Models.Commands.ShowCommands;
 using SimpleShop.Models.Models;
 using SimpleShop.Models.Services;
@@ -19,7 +18,6 @@ namespace SimpleShop.Models.ViewModels.ListViewModels
         public ICommand ShowOrdersCommand { get; }
         public ICommand ShowOrderFullInfoCommand { get; }
         public ICommand AddNewCustomerCommand { get; }
-        public ICommand UpdateCustomerCommand { get; }
         public ICommand DeleteCustomerCommand { get; }
 
         private MVVMConverter _mvmConverter;
@@ -34,7 +32,6 @@ namespace SimpleShop.Models.ViewModels.ListViewModels
             ShowOrdersCommand = new ShowOrdersCommand(_navigationService, CreateOrderListViewModel);
             //ShowOrderFullInfoCommand = new ShowOrderFullInfoCommand(_navigationService, Cre);
             AddNewCustomerCommand = new AddNewCustomerCommand(_navigationService, CreateSingleCustomerViewModel);
-            UpdateCustomerCommand = new UpdateCustomerCommand(_navigationService, SelectedCustomer, CreateBindedCustomerViewModel);
             //DeleteCustomerCommand = new DeleteCustomercommand(_navigationService);
         }
 

@@ -7,7 +7,6 @@
         xmlns:views="clr-namespace:SimpleShop.UI.Views"
         xmlns:lvms="clr-namespace:SimpleShop.Models.ViewModels.ListViewModels;assembly=SimpleShop.Models"
         xmlns:svms="clr-namespace:SimpleShop.Models.ViewModels.SingleEntityViewModel;assembly=SimpleShop.Models"
-        xmlns:uvms="clr-namespace:SimpleShop.Models.ViewModels.UpdateViewModels;assembly=SimpleShop.Models"
         mc:Ignorable="d"
         Title="Simple Shop"
         FontSize="24"
@@ -30,9 +29,6 @@
                 <views:AddNewCustomerViewControl/>
             </DataTemplate>
             <DataTemplate DataType="{x:Type svms:SingleOrderViewModel}">
-                <views:AddNewOrderViewControl/>
-            </DataTemplate>
-            <DataTemplate DataType="{x:Type uvms:UpdateSellerViewModel}">
                 <views:AddNewOrderViewControl/>
             </DataTemplate>
         </Grid.Resources>

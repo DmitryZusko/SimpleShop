@@ -57,12 +57,10 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto" SharedSizeGroup="LowerButtons"/>
                 <ColumnDefinition Width="auto" SharedSizeGroup="LowerButtons"/>
-                <ColumnDefinition Width="auto" SharedSizeGroup="LowerButtons"/>
             </Grid.ColumnDefinitions>
 
             <Button Grid.Column="0" Content="Add New" Margin="10, 25, 5, 0" Command="{Binding AddNewSellerCommand}"/>
-            <Button Grid.Column="1" Content="Update" Margin="5, 25, 5, 0" Command="{Binding UpdateSellerCommand}"/>
-            <Button Grid.Column="2" Content="Delete" Margin="5, 25, 10, 0" Command="{Binding DeleteSellerCommand}"/>
+            <Button Grid.Column="1" Content="Delete" Margin="5, 25, 10, 0" Command="{Binding DeleteSellerCommand}"/>
         </Grid>
     </Grid>
 </UserControl>

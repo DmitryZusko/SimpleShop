@@ -19,7 +19,6 @@ namespace SimpleShop.Models.ViewModels.ListViewModels
         public ICommand ShowOrdersCommand { get; }
         public ICommand ShowOrderFullInfoCommand { get; }
         public ICommand AddNewSellerCommand { get; }
-        public ICommand UpdateSellerCommand { get; }
         public ICommand DeleteSellerCommand { get; }
 
         private readonly MVVMConverter _mvmConverter;
@@ -35,7 +34,6 @@ namespace SimpleShop.Models.ViewModels.ListViewModels
             ShowOrdersCommand = new ShowOrdersCommand(_navigationService, CreateOrderListViewModel);
             //ShowOrderFullInfoCommand = new ShowOrderFullInfoCommand(NavigationService);
             AddNewSellerCommand = new AddNewSellerCommand(_navigationService, CreateSingleSellerViewModel);
-            UpdateSellerCommand = new UpdateSellerCommand(_navigationService, BindedSeller, CreateBindedSellerViewModel);
             //DeleteSellerCommand = new DeleteSellerCommand(NavigationService);
         }
 

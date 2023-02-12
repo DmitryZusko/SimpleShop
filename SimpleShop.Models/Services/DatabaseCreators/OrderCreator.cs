@@ -1,4 +1,5 @@
-﻿using SimpleShop.DataBaseModel.DBContext;
+﻿using Microsoft.Data.SqlClient;
+using SimpleShop.DataBaseModel.DBContext;
 using SimpleShop.DataBaseModel.DTOs;
 
 namespace SimpleShop.Models.Services.DatabaseCreators

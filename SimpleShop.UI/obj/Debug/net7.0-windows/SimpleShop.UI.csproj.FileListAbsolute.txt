@@ -70,15 +70,9 @@ D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\A
 D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\ListViews\CustomerViewControl.g.cs
 D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\ListViews\OrderViewControl.g.cs
 D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\ListViews\SellerViewControl.g.cs
-D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\UpdateViews\UpdateCustomerViewControl.g.cs
-D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\UpdateViews\UpdateOrderViewControl.g.cs
-D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\UpdateViews\UpdateSellerViewControl.g.cs
 D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\AddViews\AddNewCustomerViewControl.baml
 D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\AddViews\AddNewOrderViewControl.baml
 D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\AddViews\AddNewSellerViewControl.baml
 D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\ListViews\CustomerViewControl.baml
 D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\ListViews\OrderViewControl.baml
 D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\ListViews\SellerViewControl.baml
-D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\UpdateViews\UpdateCustomerViewControl.baml
-D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\UpdateViews\UpdateOrderViewControl.baml
-D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\UpdateViews\UpdateSellerViewControl.baml
