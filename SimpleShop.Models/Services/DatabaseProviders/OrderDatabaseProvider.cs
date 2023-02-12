@@ -13,5 +13,12 @@ namespace SimpleShop.Models.Services.DatabaseProviders
                 return context.Orders.ProjectTo<Order>(QuerybleConfig).ToList();
             }
         }
+        public Order GetOrder(int id)
+        {
+            using (var context = new DatabaseContext())
+            {
+                return context.Orders.ProjectTo<Order>(QuerybleConfig).FirstOrDefault(o => o.ID == id);
+            }
+        }
     }
 }

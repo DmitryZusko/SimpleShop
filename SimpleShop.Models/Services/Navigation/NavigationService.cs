@@ -2,7 +2,7 @@
 using SimpleShop.Models.ViewModels;
 using SimpleShop.Models.ViewModels.ListViewModels;
 
-namespace SimpleShop.Models.Services
+namespace SimpleShop.Models.Services.Navigation
 {
     public class NavigationService
     {
@@ -35,7 +35,7 @@ namespace SimpleShop.Models.Services
             _navigationStore.CurrentViewModel = newViewModel();
         }
 
-        public void CreateBindedViewModel(Func<ViewModelBase,ViewModelBase> newViewModel, ViewModelBase bindedViewModel)
+        public void CreateBindedViewModel(Func<ViewModelBase, ViewModelBase> newViewModel, ViewModelBase bindedViewModel)
         {
             _navigationStore.PreviousViewModel = _navigationStore.CurrentViewModel;
             _navigationStore.CurrentViewModel = newViewModel(bindedViewModel);

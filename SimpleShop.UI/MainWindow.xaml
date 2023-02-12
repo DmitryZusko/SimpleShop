@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SimpleShop.UI"
         xmlns:views="clr-namespace:SimpleShop.UI.Views"
+        xmlns:dviews="clr-namespace:SimpleShop.UI.Views.DeleteViews"
         xmlns:lvms="clr-namespace:SimpleShop.Models.ViewModels.ListViewModels;assembly=SimpleShop.Models"
         xmlns:svms="clr-namespace:SimpleShop.Models.ViewModels.SingleEntityViewModel;assembly=SimpleShop.Models"
+        xmlns:dvms="clr-namespace:SimpleShop.Models.ViewModels.DeleteViewModels;assembly=SimpleShop.Models"
         mc:Ignorable="d"
         Title="Simple Shop"
         FontSize="24"
@@ -30,6 +32,15 @@
             </DataTemplate>
             <DataTemplate DataType="{x:Type svms:SingleOrderViewModel}">
                 <views:AddNewOrderViewControl/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type dvms:SellerDeleteViewModel}">
+                <dviews:SellerDeleteControl/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type dvms:CustomerDeleteViewModel}">
+                <dviews:CustomerDeleteControl/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type dvms:OrderDeleteViewModel}">
+                <dviews:OrderDeleteControl/>
             </DataTemplate>
         </Grid.Resources>
 

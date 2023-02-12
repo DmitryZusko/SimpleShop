@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using SimpleShop.Models.Services;
+using SimpleShop.Models.Services.Navigation;
 using SimpleShop.Models.Stores;
 using System;
 using System.Collections.Generic;

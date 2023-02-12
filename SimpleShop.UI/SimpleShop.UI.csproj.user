@@ -16,6 +16,15 @@
     <Compile Update="Views\AddViews\AddNewSellerViewControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\DeleteViews\CustomerDeleteControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\DeleteViews\OrderDeleteControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\DeleteViews\SellerDeleteControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\TestWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -31,6 +40,15 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\AddViews\AddNewSellerViewControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\DeleteViews\CustomerDeleteControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\DeleteViews\OrderDeleteControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\DeleteViews\SellerDeleteControl.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\TestWindow.xaml">

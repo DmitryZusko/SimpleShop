@@ -76,3 +76,9 @@ D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\A
 D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\ListViews\CustomerViewControl.baml
 D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\ListViews\OrderViewControl.baml
 D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\ListViews\SellerViewControl.baml
+D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\DeleteViews\CustomerDeleteControl.g.cs
+D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\DeleteViews\OrderDeleteControl.g.cs
+D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\DeleteViews\SellerDeleteControl.g.cs
+D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\DeleteViews\CustomerDeleteControl.baml
+D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\DeleteViews\OrderDeleteControl.baml
+D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\DeleteViews\SellerDeleteControl.baml

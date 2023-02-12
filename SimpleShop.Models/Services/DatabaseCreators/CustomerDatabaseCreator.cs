@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace SimpleShop.Models.Services.DatabaseCreators
 {
-    public class CustomerCreator
+    public class CustomerDatabaseCreator
     {
         public CustomerDTO AddNew(CustomerDTO newCustomer)
         {

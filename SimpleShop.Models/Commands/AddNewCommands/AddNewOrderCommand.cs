@@ -1,4 +1,4 @@
-﻿using SimpleShop.Models.Services;
+﻿using SimpleShop.Models.Services.Navigation;
 using SimpleShop.Models.Stores;
 using SimpleShop.Models.ViewModels;
 

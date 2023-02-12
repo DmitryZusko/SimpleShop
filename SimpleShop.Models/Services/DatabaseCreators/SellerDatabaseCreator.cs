@@ -3,7 +3,7 @@ using SimpleShop.DataBaseModel.DTOs;
 
 namespace SimpleShop.Models.Services.DatabaseCreators
 {
-    public class SellerCreator
+    public class SellerDatabaseCreator
     {
         public SellerDTO AddNew(SellerDTO newSeller)
         {

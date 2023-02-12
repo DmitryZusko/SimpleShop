@@ -4,7 +4,7 @@ using SimpleShop.DataBaseModel.DTOs;
 
 namespace SimpleShop.Models.Services.DatabaseCreators
 {
-    public class OrderCreator
+    public class OrderDatabaseCreator
     {
         public OrderDTO AddNew(OrderDTO newOrder)
         {

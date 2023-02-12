@@ -1,6 +1,7 @@
 ﻿using SimpleShop.Models.Models;
-using SimpleShop.Models.Services;
+using SimpleShop.Models.Services.Navigation;
 using SimpleShop.Models.ViewModels.ClassViewModels;
+using SimpleShop.Models.ViewModels.DeleteViewModels;
 using SimpleShop.Models.ViewModels.ListViewModels;
 using SimpleShop.Models.ViewModels.SingleEntityViewModel;
 
@@ -44,6 +45,21 @@ namespace SimpleShop.Models.ViewModels
         public SingleOrderViewModel CreateSingleOrderViewModel()
         {
             return new SingleOrderViewModel(_navigationService, _simpleShop);
+        }
+
+        public SellerDeleteViewModel CreateSellerDeleteViewModel()
+        {
+            return new SellerDeleteViewModel(_navigationService, _simpleShop);
+        }
+
+        public CustomerDeleteViewModel CreateCustomerDeleteViewModel()
+        {
+            return new CustomerDeleteViewModel(_navigationService, _simpleShop);
+        }
+
+        public OrderDeleteViewModel CreateOrderDeleteViewModel()
+        {
+            return new OrderDeleteViewModel(_navigationService, _simpleShop);
         }
     }
 }

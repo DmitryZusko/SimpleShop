@@ -3,7 +3,7 @@ using SimpleShop.Models.Commands.AddNewCommands;
 using SimpleShop.Models.Commands.ConfirmCommands;
 using SimpleShop.Models.Commands.ShowCommands;
 using SimpleShop.Models.Models;
-using SimpleShop.Models.Services;
+using SimpleShop.Models.Services.Navigation;
 using SimpleShop.Models.Stores;
 using SimpleShop.Models.ViewModels.ListViewModels;
 using System.Windows.Input;

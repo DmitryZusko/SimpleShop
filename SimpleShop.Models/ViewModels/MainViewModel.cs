@@ -1,5 +1,5 @@
 ﻿using SimpleShop.Models.Models;
-using SimpleShop.Models.Services;
+using SimpleShop.Models.Services.Navigation;
 
 namespace SimpleShop.Models.ViewModels
 {

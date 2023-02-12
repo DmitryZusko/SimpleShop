@@ -45,5 +45,20 @@ namespace SimpleShop.Models.Models
             int.TryParse(orderInfo[2],out customerID);
             _generalLedger.AddOrder(amount, sellerID, customerID);
         }
+
+        internal void DeleteSeller(int id)
+        {
+            _generalLedger.DeleteSeller(id);
+        }
+
+        public void DeleteCustomer(int id)
+        {
+            _generalLedger.DeleteCustomer(id);
+        }
+
+        public void DeleteOrder(int id)
+        {
+            _generalLedger.DeleteOrder(id);
+        }
     }
 }

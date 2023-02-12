@@ -1,9 +1,10 @@
 ﻿using SimpleShop.Models.Commands;
 using SimpleShop.Models.Commands.AddNewCommands;
+using SimpleShop.Models.Commands.DeleteCommands;
 using SimpleShop.Models.Commands.ShowCommands;
 using SimpleShop.Models.Models;
-using SimpleShop.Models.Services;
 using SimpleShop.Models.Services.ModelViewModelConverter;
+using SimpleShop.Models.Services.Navigation;
 using SimpleShop.Models.ViewModels.ClassViewModels;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
@@ -34,7 +35,7 @@ namespace SimpleShop.Models.ViewModels.ListViewModels
             ShowOrdersCommand = new ShowOrdersCommand(_navigationService, CreateOrderListViewModel);
             //ShowOrderFullInfoCommand = new ShowOrderFullInfoCommand(NavigationService);
             AddNewSellerCommand = new AddNewSellerCommand(_navigationService, CreateSingleSellerViewModel);
-            //DeleteSellerCommand = new DeleteSellerCommand(NavigationService);
+            DeleteSellerCommand = new OpenSellerDeleteMenuCommand(_navigationService, CreateSellerDeleteViewModel);
         }
 
         public override bool NavigationStoreShouldStore()
