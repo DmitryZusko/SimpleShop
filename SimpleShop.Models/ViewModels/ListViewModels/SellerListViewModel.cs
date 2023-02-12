@@ -1,4 +1,6 @@
 ﻿using SimpleShop.Models.Commands;
+using SimpleShop.Models.Commands.AddNewCommands;
+using SimpleShop.Models.Commands.ShowCommands;
 using SimpleShop.Models.Models;
 using SimpleShop.Models.Services;
 using SimpleShop.Models.Services.ModelViewModelConverter;
@@ -11,6 +13,7 @@ namespace SimpleShop.Models.ViewModels.ListViewModels
     public class SellerListViewModel : ViewModelCommandsBase
     {
         public ObservableCollection<SellerViewModel> Sellers { get; set; }
+        public SellerViewModel BindedSeller { get; set; }
         public ICommand ShowSellersCommand { get; }
         public ICommand ShowCustomersCommand { get; }
         public ICommand ShowOrdersCommand { get; }
@@ -19,11 +22,11 @@ namespace SimpleShop.Models.ViewModels.ListViewModels
         public ICommand UpdateSellerCommand { get; }
         public ICommand DeleteSellerCommand { get; }
 
-        private readonly MVMConverter _mvmConverter;
+        private readonly MVVMConverter _mvmConverter;
 
         public SellerListViewModel(NavigationService navigationService, SimpleShopEntity simpleShop) : base(navigationService, simpleShop)
         {
-            _mvmConverter = new MVMConverter();
+            _mvmConverter = new MVVMConverter();
 
             Sellers = _mvmConverter.FromModelToVM<Seller, SellerViewModel>(simpleShop.GetSellersList());
 
@@ -32,7 +35,7 @@ namespace SimpleShop.Models.ViewModels.ListViewModels
             ShowOrdersCommand = new ShowOrdersCommand(_navigationService, CreateOrderListViewModel);
             //ShowOrderFullInfoCommand = new ShowOrderFullInfoCommand(NavigationService);
             AddNewSellerCommand = new AddNewSellerCommand(_navigationService, CreateSingleSellerViewModel);
-            UpdateSellerCommand = new UpdateSellerCommand(_navigationService, CreateSingleSellerViewModel);
+            UpdateSellerCommand = new UpdateSellerCommand(_navigationService, BindedSeller, CreateBindedSellerViewModel);
             //DeleteSellerCommand = new DeleteSellerCommand(NavigationService);
         }
 

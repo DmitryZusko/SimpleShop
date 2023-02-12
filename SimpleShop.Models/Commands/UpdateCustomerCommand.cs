@@ -1,28 +1,25 @@
 ﻿using SimpleShop.Models.Services;
-using SimpleShop.Models.Stores;
 using SimpleShop.Models.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using SimpleShop.Models.ViewModels.ClassViewModels;
 
 namespace SimpleShop.Models.Commands
 {
     public class UpdateCustomerCommand : CommandBase
     {
         private readonly NavigationService _navigationService;
-        private readonly Func<ViewModelBase> _customerViewModel;
+        private readonly Func<ViewModelBase, ViewModelBase> _customerViewModel;
+        private readonly CustomerViewModel _customertoUpdate;
 
-        public UpdateCustomerCommand(NavigationService navigationStore, Func<ViewModelBase> customerViewModel)
+        public UpdateCustomerCommand(NavigationService navigationStore, CustomerViewModel customertoUpdate, Func<ViewModelBase, ViewModelBase> customerViewModel)
         {
             _navigationService = navigationStore;
             _customerViewModel = customerViewModel;
+            _customertoUpdate = customertoUpdate;
         }
 
         public override void Execute(object? parameter)
         {
-            _navigationService.CreateViewModel(_customerViewModel);
+            _navigationService.CreateBindedViewModel(_customerViewModel, _customertoUpdate);
         }
     }
 }

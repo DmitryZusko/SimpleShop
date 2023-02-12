@@ -1,4 +1,7 @@
 ﻿using SimpleShop.Models.Commands;
+using SimpleShop.Models.Commands.AddNewCommands;
+using SimpleShop.Models.Commands.ConfirmCommands;
+using SimpleShop.Models.Commands.ShowCommands;
 using SimpleShop.Models.Models;
 using SimpleShop.Models.Services;
 using SimpleShop.Models.Stores;
@@ -9,17 +12,6 @@ namespace SimpleShop.Models.ViewModels.SingleEntityViewModel
 {
     public class SingleCustomerViewModel : ViewModelCommandsBase
     {
-        private int _id;
-        public int ID
-        {
-            get { return _id; }
-            set
-            {
-                _id = value;
-                OnPropertyChanged(nameof(_id));
-            }
-        }
-
         private string _companyName;
         public string CompanyName
         {
@@ -36,7 +28,8 @@ namespace SimpleShop.Models.ViewModels.SingleEntityViewModel
 
         public SingleCustomerViewModel(NavigationService navigationService, SimpleShopEntity simpleShop) : base(navigationService, simpleShop)
         {
-            CancelCommand = new CancelCommand(_navigationService);
+            SubmitCommand = new ConfirmNewCustomerCommand(navigationService, simpleShop, CompanyName, CreateCustomerListViewModel, this);
+            CancelCommand = new ShowCustomersCommand(_navigationService, CreateCustomerListViewModel); ;
         }
     }
 }

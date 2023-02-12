@@ -17,7 +17,7 @@
 
         <TextBlock Grid.Row="0" Text="NEW CUSTOMER" FontSize="36" FontWeight="Bold"/>
         <TextBlock Grid.Row="1" Text="Company Name" FontWeight="Bold" HorizontalAlignment="Center"/>
-        <TextBox Grid.Row="2" Text="{Binding CompanyName}"/>
+        <TextBox Grid.Row="2" Text="{Binding CustomerToUpdate.Company}"/>
 
         <Grid Grid.Row="3" HorizontalAlignment="Center">
             <Grid.ColumnDefinitions>

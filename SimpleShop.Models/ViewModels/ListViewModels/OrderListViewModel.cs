@@ -1,4 +1,6 @@
 ﻿using SimpleShop.Models.Commands;
+using SimpleShop.Models.Commands.AddNewCommands;
+using SimpleShop.Models.Commands.ShowCommands;
 using SimpleShop.Models.Models;
 using SimpleShop.Models.Services;
 using SimpleShop.Models.Services.ModelViewModelConverter;
@@ -21,10 +23,10 @@ namespace SimpleShop.Models.ViewModels.ListViewModels
         public ICommand UpdateOrderCommand { get; }
         public ICommand DeleteOrderCommand { get; }
 
-        private readonly MVMConverter _mvmConverter;
+        private readonly MVVMConverter _mvmConverter;
         public OrderListViewModel(NavigationService navigationService, SimpleShopEntity simpleShop) : base(navigationService, simpleShop)
         {
-            _mvmConverter = new MVMConverter();
+            _mvmConverter = new MVVMConverter();
 
             Orders = _mvmConverter.FromModelToVM<Order, OrderViewModel>(_simpleShop.GetOrdersList());
 
@@ -33,7 +35,7 @@ namespace SimpleShop.Models.ViewModels.ListViewModels
             ShowOrdersCommand = new ShowOrdersCommand(_navigationService, CreateOrderListViewModel);
             //ShowOrderFullInfoCommand = new ShowOrderFullInfoCommand(_navigationService);
             AddNewOrderCommand = new AddNewOrderCommand(_navigationService, CreateSingleOrderViewModel);
-            UpdateOrderCommand = new UpdateOrderCommand(_navigationService, CreateSingleOrderViewModel);
+            //UpdateOrderCommand = new UpdateOrderCommand(_navigationService, Createbin);
             //DeleteOrderCommand = new DeleteOrderCommand(_navigationService);
         }
 

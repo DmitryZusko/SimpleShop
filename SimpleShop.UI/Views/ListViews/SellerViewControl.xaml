@@ -30,7 +30,7 @@
         </Grid>
 
         <Grid Grid.Row="1">
-            <ListView Margin="0, 25, 0, 0" ItemsSource="{Binding Path=Sellers}">
+            <ListView Margin="0, 25, 0, 0" ItemsSource="{Binding Path=Sellers}" SelectedItem="{Binding BindedSeller}">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="Seller ID">

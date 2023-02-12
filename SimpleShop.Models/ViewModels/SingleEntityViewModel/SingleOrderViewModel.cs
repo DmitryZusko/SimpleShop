@@ -1,4 +1,5 @@
-﻿using SimpleShop.Models.Commands;
+﻿using SimpleShop.Models.Commands.ConfirmCommands;
+using SimpleShop.Models.Commands.ShowCommands;
 using SimpleShop.Models.Models;
 using SimpleShop.Models.Services;
 using System.Windows.Input;
@@ -7,29 +8,6 @@ namespace SimpleShop.Models.ViewModels.SingleEntityViewModel
 {
     public class SingleOrderViewModel : ViewModelCommandsBase
     {
-        private int _id;
-
-        public int ID
-        {
-            get { return _id; }
-            set
-            {
-                _id = value;
-                OnPropertyChanged(nameof(_id));
-            }
-        }
-        private DateTime _orderDate;
-
-        public DateTime OrderDate
-        {
-            get { return _orderDate; }
-            set
-            {
-                _orderDate = value;
-                OnPropertyChanged(nameof(_orderDate));
-            }
-        }
-
         private decimal _amount;
 
         public decimal Amount
@@ -42,29 +20,31 @@ namespace SimpleShop.Models.ViewModels.SingleEntityViewModel
             }
         }
 
-        private string _sellerName;
+        private int _sellerID;
 
-        public string SellerName
+        public int SellerID
         {
-            get { return _sellerName; }
+            get { return _sellerID; }
             set
             {
-                _sellerName = value;
-                OnPropertyChanged(nameof(_sellerName));
+                _sellerID = value;
+                OnPropertyChanged(nameof(_sellerID));
             }
         }
 
-        private string _customerCompany;
+        private int _customerID;
 
-        public string CustomerCompany
+        public int CustomerID
         {
-            get { return _customerCompany; }
+            get { return _customerID; }
             set
             {
-                _customerCompany = value;
-                OnPropertyChanged(nameof(_customerCompany));
+                _customerID = value;
+                OnPropertyChanged(nameof(_customerID));
             }
         }
+
+
 
 
 
@@ -72,7 +52,8 @@ namespace SimpleShop.Models.ViewModels.SingleEntityViewModel
         public ICommand CancelCommand { get; }
         public SingleOrderViewModel(NavigationService navigationService, SimpleShopEntity simpleShop) : base(navigationService, simpleShop)
         {
-            CancelCommand = new CancelCommand(_navigationService);
+            SubmitCommand = new ConfirmNewOrderCommand(_navigationService, _simpleShop, new List<string> {Amount.ToString(), SellerID.ToString(), CustomerID.ToString()}, CreateOrderListViewModel, this);
+            CancelCommand = new ShowOrdersCommand(_navigationService, CreateOrderListViewModel);
         }
     }
 }

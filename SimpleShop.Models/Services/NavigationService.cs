@@ -1,5 +1,6 @@
 ﻿using SimpleShop.Models.Stores;
 using SimpleShop.Models.ViewModels;
+using SimpleShop.Models.ViewModels.ListViewModels;
 
 namespace SimpleShop.Models.Services
 {
@@ -34,13 +35,18 @@ namespace SimpleShop.Models.Services
             _navigationStore.CurrentViewModel = newViewModel();
         }
 
+        public void CreateBindedViewModel(Func<ViewModelBase,ViewModelBase> newViewModel, ViewModelBase bindedViewModel)
+        {
+            _navigationStore.PreviousViewModel = _navigationStore.CurrentViewModel;
+            _navigationStore.CurrentViewModel = newViewModel(bindedViewModel);
+        }
+
         public void ReturnToPreviousViewModel()
         {
             if (_navigationStore.PreviousViewModel == null)
             {
                 return;
             }
-            _navigationStore.CurrentViewModel = _navigationStore.PreviousViewModel;
         }
 
     }

@@ -14,5 +14,13 @@ namespace SimpleShop.Models.Services.DatabaseProviders
                 return context.Sellers.ProjectTo<Seller>(QuerybleConfig).ToList();
             }
         }
+
+        public Seller Find(string sellerFullName)
+        {
+            using (var context = new DatabaseContext())
+            {
+                return context.Sellers.ProjectTo<Seller>(QuerybleConfig).FirstOrDefault(s => s.FullName == sellerFullName);
+            }
+        }
     }
 }

@@ -26,7 +26,7 @@
             </Grid.ColumnDefinitions>
 
             <Button Grid.Column="0" Content="Confirm" Margin="10, 10, 5, 0"
-                    Command="{Binding ConfirmNewCustomerCommand}"/>
+                    Command="{Binding SubmitCommand}"/>
             <Button Grid.Column="1" Content="Cancel" Margin="5, 10, 10, 0"
                     Command="{Binding CancelCommand}"/>
         </Grid>

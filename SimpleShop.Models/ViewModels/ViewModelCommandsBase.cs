@@ -1,7 +1,9 @@
 ﻿using SimpleShop.Models.Models;
 using SimpleShop.Models.Services;
+using SimpleShop.Models.ViewModels.ClassViewModels;
 using SimpleShop.Models.ViewModels.ListViewModels;
 using SimpleShop.Models.ViewModels.SingleEntityViewModel;
+using SimpleShop.Models.ViewModels.UpdateViewModels;
 
 namespace SimpleShop.Models.ViewModels
 {
@@ -43,6 +45,21 @@ namespace SimpleShop.Models.ViewModels
         public SingleOrderViewModel CreateSingleOrderViewModel()
         {
             return new SingleOrderViewModel(_navigationService, _simpleShop);
+        }
+
+        public UpdateSellerViewModel CreateBindedSellerViewModel(ViewModelBase bindedSeller)
+        {
+            return new UpdateSellerViewModel(_navigationService, _simpleShop, bindedSeller);
+        }
+
+        public UpdateCustomerViewModel CreateBindedCustomerViewModel(ViewModelBase bindedCustomer)
+        {
+            return new UpdateCustomerViewModel(_navigationService, _simpleShop, bindedCustomer);
+        }
+
+        public UpdateOrderViewModel CreatBindedOrderViewModel(OrderViewModel bindedOrder)
+        {
+            return new UpdateOrderViewModel(_navigationService, _simpleShop, bindedOrder);
         }
     }
 }

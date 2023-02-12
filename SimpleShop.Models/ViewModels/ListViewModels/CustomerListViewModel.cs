@@ -1,10 +1,10 @@
 ﻿using SimpleShop.Models.Commands;
+using SimpleShop.Models.Commands.AddNewCommands;
+using SimpleShop.Models.Commands.ShowCommands;
 using SimpleShop.Models.Models;
 using SimpleShop.Models.Services;
 using SimpleShop.Models.Services.ModelViewModelConverter;
-using SimpleShop.Models.Stores;
 using SimpleShop.Models.ViewModels.ClassViewModels;
-using SimpleShop.Models.ViewModels.SingleEntityViewModel;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 
@@ -13,6 +13,7 @@ namespace SimpleShop.Models.ViewModels.ListViewModels
     public class CustomerListViewModel : ViewModelCommandsBase
     {
         public ObservableCollection<CustomerViewModel> Customers { get; set; }
+        public CustomerViewModel SelectedCustomer { get; set; }
         public ICommand ShowSellersCommand { get; }
         public ICommand ShowCustomersCommand { get; }
         public ICommand ShowOrdersCommand { get; }
@@ -21,10 +22,10 @@ namespace SimpleShop.Models.ViewModels.ListViewModels
         public ICommand UpdateCustomerCommand { get; }
         public ICommand DeleteCustomerCommand { get; }
 
-        private MVMConverter _mvmConverter;
+        private MVVMConverter _mvmConverter;
         public CustomerListViewModel(NavigationService navigationService, SimpleShopEntity simpleShop) : base(navigationService, simpleShop)
         {
-            _mvmConverter = new MVMConverter();
+            _mvmConverter = new MVVMConverter();
 
             Customers = _mvmConverter.FromModelToVM<Customer, CustomerViewModel>(_simpleShop.GetCustomersList());
 
@@ -33,7 +34,7 @@ namespace SimpleShop.Models.ViewModels.ListViewModels
             ShowOrdersCommand = new ShowOrdersCommand(_navigationService, CreateOrderListViewModel);
             //ShowOrderFullInfoCommand = new ShowOrderFullInfoCommand(_navigationService, Cre);
             AddNewCustomerCommand = new AddNewCustomerCommand(_navigationService, CreateSingleCustomerViewModel);
-            UpdateCustomerCommand = new UpdateCustomerCommand(_navigationService, CreateSingleCustomerViewModel);
+            UpdateCustomerCommand = new UpdateCustomerCommand(_navigationService, SelectedCustomer, CreateBindedCustomerViewModel);
             //DeleteCustomerCommand = new DeleteCustomercommand(_navigationService);
         }
 
