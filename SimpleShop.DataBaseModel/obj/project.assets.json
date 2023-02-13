@@ -3462,24 +3462,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Prijom\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\googl\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Prijom\\Downloads\\SimpleShop\\SimpleShop\\SimpleShop.DataBaseModel\\SimpleShop.DataBaseModel.csproj",
+      "projectUniqueName": "D:\\Projects\\SimpleShop\\SimpleShop\\SimpleShop.DataBaseModel\\SimpleShop.DataBaseModel.csproj",
       "projectName": "SimpleShop.DataBaseModel",
-      "projectPath": "C:\\Users\\Prijom\\Downloads\\SimpleShop\\SimpleShop\\SimpleShop.DataBaseModel\\SimpleShop.DataBaseModel.csproj",
-      "packagesPath": "C:\\Users\\Prijom\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Prijom\\Downloads\\SimpleShop\\SimpleShop\\SimpleShop.DataBaseModel\\obj\\",
+      "projectPath": "D:\\Projects\\SimpleShop\\SimpleShop\\SimpleShop.DataBaseModel\\SimpleShop.DataBaseModel.csproj",
+      "packagesPath": "C:\\Users\\googl\\.nuget\\packages\\",
+      "outputPath": "D:\\Projects\\SimpleShop\\SimpleShop\\SimpleShop.DataBaseModel\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Prijom\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\googl\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -54,7 +54,7 @@ namespace SimpleShop.DataBaseModel.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime>("OrderDate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("SMALLDATETIME ");
 
                     b.Property<int>("SellerID")
                         .HasColumnType("int");
@@ -76,11 +76,7 @@ namespace SimpleShop.DataBaseModel.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LastName")
+                    b.Property<string>("FullName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
