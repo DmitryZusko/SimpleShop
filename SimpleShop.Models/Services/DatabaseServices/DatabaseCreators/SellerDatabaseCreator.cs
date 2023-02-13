@@ -1,9 +1,9 @@
 ﻿using SimpleShop.DataBaseModel.DBContext;
 using SimpleShop.DataBaseModel.DTOs;
 
-namespace SimpleShop.Models.Services.DatabaseCreators
+namespace SimpleShop.Models.Services.DatabaseServices.DatabaseCreators
 {
-    public class SellerDatabaseCreator
+    public class SellerDatabaseCreator : DatabaseServiceBase
     {
         public SellerDTO AddNew(SellerDTO newSeller)
         {

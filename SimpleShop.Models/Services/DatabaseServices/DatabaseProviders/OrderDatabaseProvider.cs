@@ -2,9 +2,9 @@
 using SimpleShop.DataBaseModel.DBContext;
 using SimpleShop.Models.Models;
 
-namespace SimpleShop.Models.Services.DatabaseProviders
+namespace SimpleShop.Models.Services.DatabaseServices.DatabaseProviders
 {
-    public class OrderDatabaseProvider : ProviderMapperBase
+    public class OrderDatabaseProvider : DatabaseServiceBase
     {
         public List<Order> LoadTable()
         {

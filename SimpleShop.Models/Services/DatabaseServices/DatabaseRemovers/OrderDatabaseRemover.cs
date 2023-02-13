@@ -9,9 +9,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SimpleShop.Models.Services.DatabaseRemovers
+namespace SimpleShop.Models.Services.DatabaseServices.DatabaseRemovers
 {
-    internal class OrderDatabaseRemover : MVVMConverter
+    internal class OrderDatabaseRemover : DatabaseServiceBase
     {
         public void Remove(Order order)
         {

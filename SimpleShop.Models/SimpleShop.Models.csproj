@@ -14,4 +14,8 @@
     <ProjectReference Include="..\SimpleShop.DataBaseModel\SimpleShop.DataBaseModel.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\MVMServices\" />
+  </ItemGroup>
+
 </Project>

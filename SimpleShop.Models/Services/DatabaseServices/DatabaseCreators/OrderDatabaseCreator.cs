@@ -2,9 +2,9 @@
 using SimpleShop.DataBaseModel.DBContext;
 using SimpleShop.DataBaseModel.DTOs;
 
-namespace SimpleShop.Models.Services.DatabaseCreators
+namespace SimpleShop.Models.Services.DatabaseServices.DatabaseCreators
 {
-    public class OrderDatabaseCreator
+    public class OrderDatabaseCreator : DatabaseServiceBase
     {
         public OrderDTO AddNew(OrderDTO newOrder)
         {

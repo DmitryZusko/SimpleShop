@@ -3,9 +3,9 @@ using SimpleShop.DataBaseModel.DBContext;
 using SimpleShop.Models.Models;
 using System.Linq;
 
-namespace SimpleShop.Models.Services.DatabaseProviders
+namespace SimpleShop.Models.Services.DatabaseServices.DatabaseProviders
 {
-    public class SellersDatabaseProvider : ProviderMapperBase
+    public class SellersDatabaseProvider : DatabaseServiceBase
     {
         public List<Seller> LoadTable()
         {

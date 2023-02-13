@@ -1,7 +1,7 @@
 ﻿using SimpleShop.DataBaseModel.DTOs;
-using SimpleShop.Models.Services.DatabaseCreators;
-using SimpleShop.Models.Services.DatabaseProviders;
-using SimpleShop.Models.Services.DatabaseRemovers;
+using SimpleShop.Models.Services.DatabaseServices.DatabaseCreators;
+using SimpleShop.Models.Services.DatabaseServices.DatabaseProviders;
+using SimpleShop.Models.Services.DatabaseServices.DatabaseRemovers;
 using SimpleShop.Models.Services.ModelViewModelConverter;
 using SimpleShop.Models.Services.Validatiors;
 
