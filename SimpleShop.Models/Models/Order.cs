@@ -3,7 +3,7 @@
     public class Order : IModel
     {
         public int ID { get; set; }
-        public DateTime OrderDate { get; set; }
+        public string OrderDate { get; set; }
         public decimal Amount { get; set; }
         public int SellerId { get; set; }
         public string SellerFullName { get; set; }

@@ -1,30 +1,26 @@
-﻿using SimpleShop.Models.Commands;
-using SimpleShop.Models.Commands.ShowCommands;
+﻿using SimpleShop.Models.Commands.ShowCommands;
 using SimpleShop.Models.Models;
-using SimpleShop.Models.Services.ModelViewModelConverter;
+using SimpleShop.Models.Services.MVMServices.MVMProviders;
 using SimpleShop.Models.Services.Navigation;
 using SimpleShop.Models.ViewModels.ClassViewModels;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace SimpleShop.Models.ViewModels.ListViewModels
 {
     public class OrderFullInfoViewModel : ViewModelCommandsBase
     {
+        private readonly OrderMVMProvider _orderProvider;
+
         public ObservableCollection<FullOrderViewModel> Orders { get; set; }
         public ICommand CancelCommand { get; }
-        private readonly MVVMConverter _mvmConverter;
         public OrderFullInfoViewModel(NavigationService navigationService, SimpleShopEntity simpleShop) : base(navigationService, simpleShop)
         {
-            CancelCommand = new ShowOrdersCommand(navigationService, CreateOrderListViewModel);
-            _mvmConverter = new MVVMConverter();
+            _orderProvider = new OrderMVMProvider(_simpleShop);
 
-            Orders = _mvmConverter.FromModelToVM<Order, FullOrderViewModel>(_simpleShop.GetOrdersList());
+            CancelCommand = new ShowOrdersCommand(navigationService, CreateOrderListViewModel);
+
+            Orders = _orderProvider.GetFullOrders();
         }
     }
 }

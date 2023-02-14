@@ -1,8 +1,6 @@
-﻿using SimpleShop.DataBaseModel.DTOs;
-using SimpleShop.Models.Services.DatabaseServices.DatabaseCreators;
+﻿using SimpleShop.Models.Services.DatabaseServices.DatabaseCreators;
 using SimpleShop.Models.Services.DatabaseServices.DatabaseProviders;
 using SimpleShop.Models.Services.DatabaseServices.DatabaseRemovers;
-using SimpleShop.Models.Services.ModelViewModelConverter;
 using SimpleShop.Models.Services.Validatiors;
 
 namespace SimpleShop.Models.Models
@@ -21,7 +19,6 @@ namespace SimpleShop.Models.Models
         private readonly SellerDatabaseRemover _sellerRemover;
         private readonly CustomerDatabaseRemover _customerRemover;
         private readonly OrderDatabaseRemover _orderRemover;
-        private readonly MVVMConverter _mvvmConverter;
         private readonly IdentificatorValidator _idValidatior;
 
         public GeneralLedger()
@@ -32,11 +29,10 @@ namespace SimpleShop.Models.Models
             _sellerCreator = new SellerDatabaseCreator();
             _customerCreator = new CustomerDatabaseCreator();
             _orderCreator = new OrderDatabaseCreator();
-            _mvvmConverter = new MVVMConverter();
             _idValidatior = new IdentificatorValidator();
             _sellerRemover = new SellerDatabaseRemover();
             _customerRemover = new CustomerDatabaseRemover();
-            _orderRemover= new OrderDatabaseRemover();
+            _orderRemover = new OrderDatabaseRemover();
 
             _sellers = _sellerProvider.LoadTable();
             _customers = _customersProvider.LoadTable();
@@ -58,31 +54,19 @@ namespace SimpleShop.Models.Models
             return _orders;
         }
 
-        public void AddSeller(string newSellerName)
+        public void AddSeller(Seller newSeller)
         {
-            var newSeller = _sellerCreator.AddNew(_mvvmConverter.Map<SellerDTO>(new Seller { FullName = newSellerName }));
-            _sellers.Add(_mvvmConverter.Map<Seller>(newSeller));
+            _sellers.Add(_sellerCreator.AddNew(newSeller));
         }
 
-        public void AddCustomer(string newCustomerCompany)
+        public void AddCustomer(Customer newCustomer)
         {
-            var newCustomer = _customerCreator.AddNew(_mvvmConverter.Map<CustomerDTO>(new Customer { Company = newCustomerCompany }));
-            _customers.Add(_mvvmConverter.Map<Customer>(newCustomer));
+            _customers.Add(_customerCreator.AddNew(newCustomer));
         }
 
-        public void AddOrder(decimal amount, int sellerID, int customerID)
+        public void AddOrder(Order newOrder)
         {
-            var newOrder = _orderCreator
-                .AddNew(_mvvmConverter
-                .Map<OrderDTO>(new Order
-                {
-                    OrderDate = DateTime.
-                    UtcNow,
-                    Amount = amount,
-                    SellerId = sellerID,
-                    CustomerId = customerID
-                }));
-            _orders.Add(_mvvmConverter.Map<Order>(newOrder));
+            _orders.Add(_orderCreator.AddNew(newOrder));
         }
 
         public void DeleteSeller(int id)

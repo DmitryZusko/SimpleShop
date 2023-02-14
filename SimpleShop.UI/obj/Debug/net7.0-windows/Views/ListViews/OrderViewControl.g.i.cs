@@ -53,7 +53,7 @@ namespace SimpleShop.UI.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SimpleShop.UI;V1.0.0.0;component/views/listviews/orderviewcontrol.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/SimpleShop.UI;component/views/listviews/orderviewcontrol.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\ListViews\OrderViewControl.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

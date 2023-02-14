@@ -2,6 +2,7 @@
 using SimpleShop.Models.Commands.ConfirmCommands;
 using SimpleShop.Models.Commands.ShowCommands;
 using SimpleShop.Models.Models;
+using SimpleShop.Models.Services.MVMServices.MVMCreators;
 using SimpleShop.Models.Services.Navigation;
 using SimpleShop.Models.Stores;
 using SimpleShop.Models.ViewModels.ListViewModels;
@@ -12,6 +13,8 @@ namespace SimpleShop.Models.ViewModels.SingleEntityViewModel
 {
     public class SingleSellerViewModel : ViewModelCommandsBase
     {
+        private readonly SellerMVMCreator _sellerCreator;
+
         private string _fullName;
 
         public string FullName
@@ -30,8 +33,10 @@ namespace SimpleShop.Models.ViewModels.SingleEntityViewModel
 
         public SingleSellerViewModel(NavigationService navigationService, SimpleShopEntity simpleShop) : base(navigationService, simpleShop)
         {
+            _sellerCreator = new SellerMVMCreator(_simpleShop);
+
             CancelCommand = new ShowSellersCommand(_navigationService, CreateSellerListViewModel);
-            SubmitCommand = new ConfirmNewSellerCommand(_navigationService, _simpleShop, FullName, CreateSellerListViewModel, this);
+            SubmitCommand = new ConfirmNewSellerCommand(_navigationService, _sellerCreator, FullName, CreateSellerListViewModel, this);
         }
     }
 }

@@ -25,25 +25,19 @@ namespace SimpleShop.Models.Models
             return _generalLedger.GetOrdersList();
         }
 
-        public void AddSeller(string newSellerName)
+        public void AddSeller(Seller newSeller)
         {
-            _generalLedger.AddSeller(newSellerName);
+            _generalLedger.AddSeller(newSeller);
         }
 
-        public void AddCustomer(string newCustomer)
+        public void AddCustomer(Customer newCustomer)
         {
             _generalLedger.AddCustomer(newCustomer);
         }
 
-        public void AddOrder(List<string> orderInfo)
+        public void AddOrder(Order newOrder)
         {
-            decimal amount;
-            decimal.TryParse(orderInfo[0], out amount);
-            int sellerID;
-            int.TryParse(orderInfo[1],out sellerID);
-            int customerID;
-            int.TryParse(orderInfo[2],out customerID);
-            _generalLedger.AddOrder(amount, sellerID, customerID);
+            _generalLedger.AddOrder(newOrder);
         }
 
         internal void DeleteSeller(int id)

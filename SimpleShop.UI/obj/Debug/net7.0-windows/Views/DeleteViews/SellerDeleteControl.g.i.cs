@@ -53,7 +53,7 @@ namespace SimpleShop.UI.Views.DeleteViews {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SimpleShop.UI;V1.0.0.0;component/views/deleteviews/sellerdeletecontrol.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/SimpleShop.UI;component/views/deleteviews/sellerdeletecontrol.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\DeleteViews\SellerDeleteControl.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

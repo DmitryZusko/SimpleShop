@@ -1,6 +1,8 @@
 ﻿using SimpleShop.Models.Models;
+using SimpleShop.Models.Services.MVMServices.MVMCreators;
 using SimpleShop.Models.Services.Navigation;
 using SimpleShop.Models.ViewModels;
+using SimpleShop.Models.ViewModels.ClassViewModels;
 using SimpleShop.Models.ViewModels.SingleEntityViewModel;
 
 namespace SimpleShop.Models.Commands.ConfirmCommands
@@ -8,14 +10,14 @@ namespace SimpleShop.Models.Commands.ConfirmCommands
     public class ConfirmNewSellerCommand : CommandBase
     {
         private readonly NavigationService _navigationService;
-        private readonly SimpleShopEntity _simpleShop;
+        private readonly SellerMVMCreator _sellerCreator;
         private string _newSellerName;
         private readonly SingleSellerViewModel _viewModelSender;
         private readonly Func<ViewModelBase> _createSelerListViewModel;
-        public ConfirmNewSellerCommand(NavigationService navigationService, SimpleShopEntity simpleShop, string fullName, Func<ViewModelBase> createSellerListViewModel, SingleSellerViewModel parentViewModel)
+        public ConfirmNewSellerCommand(NavigationService navigationService, SellerMVMCreator sellerCreator, string fullName, Func<ViewModelBase> createSellerListViewModel, SingleSellerViewModel parentViewModel)
         {
             _navigationService = navigationService;
-            _simpleShop = simpleShop;
+            _sellerCreator = sellerCreator;
             _newSellerName = fullName;
             _createSelerListViewModel = createSellerListViewModel;
             _viewModelSender = parentViewModel;
@@ -29,7 +31,7 @@ namespace SimpleShop.Models.Commands.ConfirmCommands
 
         public override void Execute(object? parameter)
         {
-            _simpleShop.AddSeller(_newSellerName);
+            _sellerCreator.AddNew(new SellerViewModel { FullName = _newSellerName });
             _navigationService.CreateViewModel(_createSelerListViewModel);
         }
     }

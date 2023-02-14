@@ -1,6 +1,8 @@
 ﻿using SimpleShop.Models.Models;
+using SimpleShop.Models.Services.MVMServices.MVMCreators;
 using SimpleShop.Models.Services.Navigation;
 using SimpleShop.Models.ViewModels;
+using SimpleShop.Models.ViewModels.ClassViewModels;
 using SimpleShop.Models.ViewModels.SingleEntityViewModel;
 
 namespace SimpleShop.Models.Commands.ConfirmCommands
@@ -8,15 +10,15 @@ namespace SimpleShop.Models.Commands.ConfirmCommands
     public class ConfirmNewOrderCommand : CommandBase
     {
         private NavigationService _navigationService;
-        private SimpleShopEntity _simpleShop;
+        private OrderMVMCreator _orderCreator;
         private List<string> _orderInfo;
         private Func<ViewModelBase> _createOrderListViewModel;
         private SingleOrderViewModel _parentViewModel;
 
-        public ConfirmNewOrderCommand(NavigationService navigationService, SimpleShopEntity simpleShop, List<string> orderInfo, Func<ViewModelBase> createOrderListViewModel, SingleOrderViewModel parentViewModel)
+        public ConfirmNewOrderCommand(NavigationService navigationService, OrderMVMCreator orderCreator, List<string> orderInfo, Func<ViewModelBase> createOrderListViewModel, SingleOrderViewModel parentViewModel)
         {
             _navigationService = navigationService;
-            _simpleShop = simpleShop; ;
+            _orderCreator = orderCreator; ;
             _orderInfo = orderInfo;
             _createOrderListViewModel = createOrderListViewModel;
             _parentViewModel = parentViewModel;
@@ -35,7 +37,13 @@ namespace SimpleShop.Models.Commands.ConfirmCommands
 
         public override void Execute(object? parameter)
         {
-            _simpleShop.AddOrder(_orderInfo);
+            _orderCreator.AddNew(new FullOrderViewModel
+            {
+                Amount = _orderInfo[0],
+                OrderDate = DateTime.UtcNow.ToShortDateString(),
+                SellerID = _orderInfo[1],
+                CustomerID = _orderInfo[2]
+            }); ;;
             _navigationService.CreateViewModel(_createOrderListViewModel);
         }
     }

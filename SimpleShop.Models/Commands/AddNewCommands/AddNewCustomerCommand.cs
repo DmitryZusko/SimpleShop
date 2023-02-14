@@ -1,5 +1,4 @@
 ﻿using SimpleShop.Models.Services.Navigation;
-using SimpleShop.Models.Stores;
 using SimpleShop.Models.ViewModels;
 
 namespace SimpleShop.Models.Commands.AddNewCommands

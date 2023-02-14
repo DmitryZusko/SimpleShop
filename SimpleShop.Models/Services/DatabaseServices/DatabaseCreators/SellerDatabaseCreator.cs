@@ -1,17 +1,20 @@
-﻿using SimpleShop.DataBaseModel.DBContext;
+﻿using AutoMapper.QueryableExtensions;
+using SimpleShop.DataBaseModel.DBContext;
 using SimpleShop.DataBaseModel.DTOs;
+using SimpleShop.Models.Models;
 
 namespace SimpleShop.Models.Services.DatabaseServices.DatabaseCreators
 {
     public class SellerDatabaseCreator : DatabaseServiceBase
     {
-        public SellerDTO AddNew(SellerDTO newSeller)
+        public Seller AddNew(Seller newSeller)
         {
             using (var context = new DatabaseContext())
             {
-                context.Sellers.Add(newSeller);
+                var newSellerDTO = Map<Seller, SellerDTO>(newSeller);
+                context.Sellers.Add(newSellerDTO);
                 context.SaveChanges();
-                return newSeller;
+                return context.Sellers.ProjectTo<Seller>(QuerybleConfig).FirstOrDefault(s => s.ID == newSellerDTO.ID);
             }
         }
     }

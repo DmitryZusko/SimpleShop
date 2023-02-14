@@ -1,13 +1,10 @@
-﻿using SimpleShop.Models.Commands;
-using SimpleShop.Models.Commands.AddNewCommands;
+﻿using SimpleShop.Models.Commands.AddNewCommands;
 using SimpleShop.Models.Commands.DeleteCommands;
 using SimpleShop.Models.Commands.ShowCommands;
 using SimpleShop.Models.Models;
-using SimpleShop.Models.Services.ModelViewModelConverter;
+using SimpleShop.Models.Services.MVMServices.MVMProviders;
 using SimpleShop.Models.Services.Navigation;
-using SimpleShop.Models.Stores;
 using SimpleShop.Models.ViewModels.ClassViewModels;
-using SimpleShop.Models.ViewModels.SingleEntityViewModel;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 
@@ -15,6 +12,8 @@ namespace SimpleShop.Models.ViewModels.ListViewModels
 {
     public class OrderListViewModel : ViewModelCommandsBase
     {
+        private readonly OrderMVMProvider _orderProvider;
+
         public ObservableCollection<OrderViewModel> Orders { get; set; }
         public ICommand ShowSellersCommand { get; }
         public ICommand ShowCustomersCommand { get; }
@@ -23,12 +22,9 @@ namespace SimpleShop.Models.ViewModels.ListViewModels
         public ICommand AddNewOrderCommand { get; }
         public ICommand DeleteOrderCommand { get; }
 
-        private readonly MVVMConverter _mvmConverter;
         public OrderListViewModel(NavigationService navigationService, SimpleShopEntity simpleShop) : base(navigationService, simpleShop)
         {
-            _mvmConverter = new MVVMConverter();
-
-            Orders = _mvmConverter.FromModelToVM<Order, OrderViewModel>(_simpleShop.GetOrdersList());
+            _orderProvider = new OrderMVMProvider(_simpleShop);
 
             ShowSellersCommand = new ShowSellersCommand(_navigationService, CreateSellerListViewModel);
             ShowCustomersCommand = new ShowCustomersCommand(_navigationService, CreateCustomerListViewModel);
@@ -36,6 +32,8 @@ namespace SimpleShop.Models.ViewModels.ListViewModels
             ShowOrderFullInfoCommand = new ShowOrderFullInfoCommand(_navigationService, CreateFullOrderInfoViewModel);
             AddNewOrderCommand = new AddNewOrderCommand(_navigationService, CreateSingleOrderViewModel);
             DeleteOrderCommand = new OpenCustomerDeleteMenuCommand(_navigationService, CreateOrderDeleteViewModel);
+
+            Orders = _orderProvider.GetOrders();
         }
 
         public override bool NavigationStoreShouldStore()
