@@ -1,0 +1,59 @@
+﻿<Window x:Class="SimpleShop.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SimpleShop.UI"
+        xmlns:views="clr-namespace:SimpleShop.UI.Views"
+        xmlns:eviews="clr-namespace:SimpleShop.UI.Views.ListViews"
+        xmlns:dviews="clr-namespace:SimpleShop.UI.Views.DeleteViews"
+        xmlns:lvms="clr-namespace:SimpleShop.Models.ViewModels.ListViewModels;assembly=SimpleShop.Models"
+        xmlns:svms="clr-namespace:SimpleShop.Models.ViewModels.SingleEntityViewModel;assembly=SimpleShop.Models"
+        xmlns:dvms="clr-namespace:SimpleShop.Models.ViewModels.DeleteViewModels;assembly=SimpleShop.Models"
+        mc:Ignorable="d"
+        Title="Simple Shop"
+        FontSize="24"
+        Height="450" Width="800"
+        MaxHeight="2000" MaxWidth="2000">
+    <Grid Margin="25, 25, 25, 25">
+        <Grid.Resources>
+            
+            <DataTemplate DataType="{x:Type lvms:SellerListViewModel}">
+                <views:SellerViewControl/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type lvms:CustomerListViewModel}">
+                <views:CustomerViewControl/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type lvms:OrderListViewModel}">
+                <views:OrderViewControl/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type lvms:OrderFullInfoViewModel}">
+                <eviews:OrderFullInfoViewControl/>
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type svms:SingleSellerViewModel}">
+                <views:AddNewSellerViewControl/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type svms:SingleCustomerViewModel}">
+                <views:AddNewCustomerViewControl/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type svms:SingleOrderViewModel}">
+                <views:AddNewOrderViewControl/>
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type dvms:SellerDeleteViewModel}">
+                <dviews:SellerDeleteControl/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type dvms:CustomerDeleteViewModel}">
+                <dviews:CustomerDeleteControl/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type dvms:OrderDeleteViewModel}">
+                <dviews:OrderDeleteControl/>
+            </DataTemplate>
+            
+        </Grid.Resources>
+
+        <ContentControl Content="{Binding CurrentViewModel}"/>
+        
+    </Grid>
+</Window>
