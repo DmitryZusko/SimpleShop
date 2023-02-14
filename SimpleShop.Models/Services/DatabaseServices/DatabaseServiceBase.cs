@@ -1,10 +1,15 @@
 ﻿using AutoMapper;
 using SimpleShop.DataBaseModel.DTOs;
 using SimpleShop.Models.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace SimpleShop.Models.Services.DatabaseProviders
+namespace SimpleShop.Models.Services.DatabaseServices
 {
-    public abstract class ProviderMapperBase
+    public abstract class DatabaseServiceBase : IDatabaseService
     {
         public MapperConfiguration QuerybleConfig
         {
@@ -16,7 +21,9 @@ namespace SimpleShop.Models.Services.DatabaseProviders
                     cfg.CreateProjection<Seller, SellerDTO>();
                     cfg.CreateProjection<CustomerDTO, Customer>();
                     cfg.CreateProjection<Customer, CustomerDTO>();
-                    cfg.CreateProjection<OrderDTO, Order>();
+                    cfg.CreateProjection<OrderDTO, Order>().
+                    ForMember(order => order.SellerFullName, cfg => cfg.MapFrom(dto => dto.Seller.FullName)).
+                    ForMember(order => order.CustomerCompany, cfg => cfg.MapFrom(dto => dto.Customer.Company));
                     cfg.CreateProjection<Order, OrderDTO>();
                 });
             }

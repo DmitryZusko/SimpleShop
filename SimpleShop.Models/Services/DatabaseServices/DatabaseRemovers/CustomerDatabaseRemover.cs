@@ -9,13 +9,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SimpleShop.Models.Services.DatabaseRemovers
+namespace SimpleShop.Models.Services.DatabaseServices.DatabaseRemovers
 {
-    internal class CustomerDatabaseRemover : MVVMConverter
+    internal class CustomerDatabaseRemover : DatabaseServiceBase
     {
         internal void Remove(Customer customer)
         {
-            using(var context = new DatabaseContext())
+            using (var context = new DatabaseContext())
             {
                 context.Customers.Remove(Map<CustomerDTO>(customer));
                 context.SaveChanges();

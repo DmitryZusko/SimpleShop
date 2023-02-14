@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\GeneratedInternalTypeHelper.g.i.cs
 
 FC:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.UI\MainWindow.xaml;;
@@ -12,4 +13,20 @@ FC:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.UI\Views\ListViews\O
 FC:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.UI\Views\ListViews\OrderViewControl.xaml;;
 FC:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.UI\Views\ListViews\SellerViewControl.xaml;;
 FC:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.UI\Views\TestWindow.xaml;;
+=======
+﻿D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\GeneratedInternalTypeHelper.g.i.cs
+
+FD:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\MainWindow.xaml;;
+FD:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\Views\AddViews\AddNewCustomerViewControl.xaml;;
+FD:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\Views\AddViews\AddNewOrderViewControl.xaml;;
+FD:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\Views\AddViews\AddNewSellerViewControl.xaml;;
+FD:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\Views\DeleteViews\CustomerDeleteControl.xaml;;
+FD:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\Views\DeleteViews\OrderDeleteControl.xaml;;
+FD:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\Views\DeleteViews\SellerDeleteControl.xaml;;
+FD:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\Views\ListViews\CustomerViewControl.xaml;;
+FD:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\Views\ListViews\OrderFullInfoViewControl.xaml;;
+FD:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\Views\ListViews\OrderViewControl.xaml;;
+FD:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\Views\ListViews\SellerViewControl.xaml;;
+FD:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\Views\TestWindow.xaml;;
+>>>>>>> af30d7d50c3c3888ee591d3e5da6783da5327751
 
