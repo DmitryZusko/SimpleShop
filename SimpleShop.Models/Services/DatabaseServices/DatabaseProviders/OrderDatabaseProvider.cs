@@ -17,6 +17,7 @@ namespace SimpleShop.Models.Services.DatabaseServices.DatabaseProviders
         {
             using (var context = new DatabaseContext())
             {
+
                 return context.Orders.ProjectTo<Order>(QuerybleConfig).FirstOrDefault(o => o.ID == id);
             }
         }

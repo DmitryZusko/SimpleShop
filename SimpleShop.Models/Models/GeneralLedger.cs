@@ -1,7 +1,6 @@
 ﻿using SimpleShop.Models.Services.DatabaseServices.DatabaseCreators;
 using SimpleShop.Models.Services.DatabaseServices.DatabaseProviders;
 using SimpleShop.Models.Services.DatabaseServices.DatabaseRemovers;
-using SimpleShop.Models.Services.Validatiors;
 
 namespace SimpleShop.Models.Models
 {
@@ -19,7 +18,6 @@ namespace SimpleShop.Models.Models
         private readonly SellerDatabaseRemover _sellerRemover;
         private readonly CustomerDatabaseRemover _customerRemover;
         private readonly OrderDatabaseRemover _orderRemover;
-        private readonly IdentificatorValidator _idValidatior;
 
         public GeneralLedger()
         {
@@ -29,7 +27,6 @@ namespace SimpleShop.Models.Models
             _sellerCreator = new SellerDatabaseCreator();
             _customerCreator = new CustomerDatabaseCreator();
             _orderCreator = new OrderDatabaseCreator();
-            _idValidatior = new IdentificatorValidator();
             _sellerRemover = new SellerDatabaseRemover();
             _customerRemover = new CustomerDatabaseRemover();
             _orderRemover = new OrderDatabaseRemover();
@@ -71,28 +68,19 @@ namespace SimpleShop.Models.Models
 
         public void DeleteSeller(int id)
         {
-            if (_idValidatior.Validate(id, this, IdentificatorValidator.ValidationMode.seller))
-            {
-                _sellerRemover.Remove(_sellerProvider.GetSeller(id));
-                _sellers.Remove(_sellers.FirstOrDefault(s => s.ID == id));
-            }
+            _sellerRemover.Remove(_sellerProvider.GetSeller(id));
+            _sellers.Remove(_sellers.FirstOrDefault(s => s.ID == id));
         }
 
         public void DeleteCustomer(int id)
         {
-            if (_idValidatior.Validate(id, this, IdentificatorValidator.ValidationMode.customer))
-            {
-                _customerRemover.Remove(_customersProvider.GetCustomer(id));
-                _customers.Remove(_customers.FirstOrDefault(c => c.ID == id));
-            }
+            _customerRemover.Remove(_customersProvider.GetCustomer(id));
+            _customers.Remove(_customers.FirstOrDefault(c => c.ID == id));
         }
         public void DeleteOrder(int id)
         {
-            if (_idValidatior.Validate(id, this, IdentificatorValidator.ValidationMode.order))
-            {
-                _orderRemover.Remove(_ordersProvider.GetOrder(id));
-                _orders.Remove(_orders.FirstOrDefault(o => o.ID == id));
-            }
+            _orderRemover.Remove(_ordersProvider.GetOrder(id));
+            _orders.Remove(_orders.FirstOrDefault(o => o.ID == id));
         }
 
     }

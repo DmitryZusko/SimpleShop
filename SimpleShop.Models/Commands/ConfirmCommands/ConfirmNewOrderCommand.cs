@@ -37,13 +37,7 @@ namespace SimpleShop.Models.Commands.ConfirmCommands
 
         public override void Execute(object? parameter)
         {
-            _orderCreator.AddNew(new FullOrderViewModel
-            {
-                Amount = _orderInfo[0],
-                OrderDate = DateTime.UtcNow.ToShortDateString(),
-                SellerID = _orderInfo[1],
-                CustomerID = _orderInfo[2]
-            }); ;;
+            _orderCreator.AddNew(_orderInfo);
             _navigationService.CreateViewModel(_createOrderListViewModel);
         }
     }
