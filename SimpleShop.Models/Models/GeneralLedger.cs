@@ -73,12 +73,14 @@
         {
             _sellerRemover.Remove(_sellerProvider.GetSeller(id));
             _sellers.Remove(_sellers.FirstOrDefault(s => s.ID == id));
+            _orders = _ordersProvider.LoadTable();
         }
 
         public void DeleteCustomer(int id)
         {
             _customerRemover.Remove(_customersProvider.GetCustomer(id));
             _customers.Remove(_customers.FirstOrDefault(c => c.ID == id));
+            _orders = _ordersProvider.LoadTable();
         }
         public void DeleteOrder(int id)
         {
