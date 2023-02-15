@@ -1,16 +1,19 @@
-﻿using SimpleShop.Models.Models;
-using SimpleShop.Models.Services.Navigation;
-using SimpleShop.Models.ViewModels.ClassViewModels;
-using SimpleShop.Models.ViewModels.DeleteViewModels;
-using SimpleShop.Models.ViewModels.ListViewModels;
-using SimpleShop.Models.ViewModels.SingleEntityViewModel;
-
-namespace SimpleShop.Models.ViewModels
+﻿namespace SimpleShop.Models.ViewModels
 {
+    using SimpleShop.Models.Models;
+    using SimpleShop.Models.Services.Navigation;
+    using SimpleShop.Models.ViewModels.DeleteViewModels;
+    using SimpleShop.Models.ViewModels.ListViewModels;
+    using SimpleShop.Models.ViewModels.SingleEntityViewModel;
+    /// <summary>
+    /// Contains methods for ViewModel creating.
+    /// Serves as a base class for all ViewModel inharitances that implement comman controls.
+    /// </summary>
     public abstract class ViewModelCommandsBase : ViewModelBase
     {
         protected SimpleShopEntity _simpleShop;
         protected NavigationService _navigationService;
+
         protected ViewModelCommandsBase(NavigationService navigationService, SimpleShopEntity simpleShop)
         {
             _simpleShop = simpleShop;

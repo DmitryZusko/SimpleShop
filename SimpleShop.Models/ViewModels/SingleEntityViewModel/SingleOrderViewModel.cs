@@ -1,12 +1,14 @@
-﻿using SimpleShop.Models.Commands.ConfirmCommands;
-using SimpleShop.Models.Commands.ShowCommands;
-using SimpleShop.Models.Models;
-using SimpleShop.Models.Services.MVMServices.MVMCreators;
-using SimpleShop.Models.Services.Navigation;
-using System.Windows.Input;
-
-namespace SimpleShop.Models.ViewModels.SingleEntityViewModel
+﻿namespace SimpleShop.Models.ViewModels.SingleEntityViewModel
 {
+    using SimpleShop.Models.Commands.ConfirmCommands;
+    using SimpleShop.Models.Commands.ShowCommands;
+    using SimpleShop.Models.Models;
+    using SimpleShop.Models.Services.MVMServices.MVMCreators;
+    using SimpleShop.Models.Services.Navigation;
+    using System.Windows.Input;
+    /// <summary>
+    /// ViewModel for a <c>AddNewOrderViewControl</c> View.
+    /// </summary>
     public class SingleOrderViewModel : ViewModelCommandsBase
     {
         private readonly OrderMVMCreator _orderCreator;
@@ -57,7 +59,7 @@ namespace SimpleShop.Models.ViewModels.SingleEntityViewModel
         {
             _orderCreator = new OrderMVMCreator(_simpleShop);
 
-            SubmitCommand = new ConfirmNewOrderCommand(_navigationService, _orderCreator, new List<string> {Amount.ToString("#.###"), SellerID.ToString(), CustomerID.ToString()}, CreateOrderListViewModel, this);
+            SubmitCommand = new ConfirmNewOrderCommand(_navigationService, _orderCreator, new List<string> { Amount.ToString("#.###"), SellerID.ToString(), CustomerID.ToString() }, CreateOrderListViewModel, this);
             CancelCommand = new ShowOrdersCommand(_navigationService, CreateOrderListViewModel);
         }
     }

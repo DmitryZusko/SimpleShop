@@ -1,9 +1,11 @@
-﻿using SimpleShop.Models.Models;
-using SimpleShop.Models.Services.Validatiors;
-using SimpleShop.Models.ViewModels.ClassViewModels;
-
-namespace SimpleShop.Models.Services.MVMServices.MVMCreators
+﻿namespace SimpleShop.Models.Services.MVMServices.MVMCreators
 {
+    using SimpleShop.Models.Models;
+    using SimpleShop.Models.Services.Validatiors;
+    using SimpleShop.Models.ViewModels.ClassViewModels;
+    /// <summary>
+    /// Hangs over adding new order operation from ViewModel to Model.
+    /// </summary>
     public class OrderMVMCreator : MVMServiceBase
     {
         private readonly SimpleShopEntity _simpleShop;

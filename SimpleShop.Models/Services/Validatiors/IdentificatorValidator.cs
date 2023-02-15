@@ -1,12 +1,9 @@
-﻿using SimpleShop.Models.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SimpleShop.Models.Services.Validatiors
+﻿namespace SimpleShop.Models.Services.Validatiors
 {
+    using SimpleShop.Models.Models;
+    /// <summary>
+    /// Allows to find out if entity with specific id contains in the DataBase or not.
+    /// </summary>
     public partial class IdentificatorValidator
     {
         private readonly SimpleShopEntity _simpleShop;

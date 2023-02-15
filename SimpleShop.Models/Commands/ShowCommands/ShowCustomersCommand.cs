@@ -1,9 +1,10 @@
-﻿using SimpleShop.Models.Services.Navigation;
-using SimpleShop.Models.Stores;
-using SimpleShop.Models.ViewModels;
-
-namespace SimpleShop.Models.Commands.ShowCommands
+﻿namespace SimpleShop.Models.Commands.ShowCommands
 {
+    using SimpleShop.Models.Services.Navigation;
+    using SimpleShop.Models.ViewModels;
+    /// <summary>
+    /// Command that allows to create new <c>CustomerListViewModel</c> view model
+    /// </summary>
     public class ShowCustomersCommand : CommandBase
     {
         private readonly NavigationService _navigationService;

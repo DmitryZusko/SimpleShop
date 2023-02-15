@@ -1,15 +1,11 @@
-﻿using SimpleShop.Models.Services.Navigation;
-using SimpleShop.Models.Stores;
-using SimpleShop.Models.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SimpleShop.Models.Commands.AddNewCommands
+﻿namespace SimpleShop.Models.Commands.AddNewCommands
 {
-    internal class AddNewSellerCommand : CommandBase
+    using SimpleShop.Models.Services.Navigation;
+    using SimpleShop.Models.ViewModels;
+    /// <summary>
+    /// Command that allows to create a new instance of <c>SingleCustomerViewModel</c> view model
+    /// </summary>
+    public class AddNewSellerCommand : CommandBase
     {
         private NavigationService _navigationService;
         private Func<ViewModelBase> _sellerViewModel;

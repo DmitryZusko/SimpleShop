@@ -1,19 +1,20 @@
-﻿using SimpleShop.Models.Models;
-using SimpleShop.Models.Services.MVMServices.MVMCreators;
-using SimpleShop.Models.Services.Navigation;
-using SimpleShop.Models.ViewModels;
-using SimpleShop.Models.ViewModels.ClassViewModels;
-using SimpleShop.Models.ViewModels.SingleEntityViewModel;
-
-namespace SimpleShop.Models.Commands.ConfirmCommands
+﻿namespace SimpleShop.Models.Commands.ConfirmCommands
 {
+    using SimpleShop.Models.Services.MVMServices.MVMCreators;
+    using SimpleShop.Models.Services.Navigation;
+    using SimpleShop.Models.ViewModels;
+    using SimpleShop.Models.ViewModels.ClassViewModels;
+    using SimpleShop.Models.ViewModels.SingleEntityViewModel;
+    /// <summary>
+    /// Command that allows to add new Seller
+    /// </summary>
     public class ConfirmNewSellerCommand : CommandBase
     {
         private readonly NavigationService _navigationService;
         private readonly SellerMVMCreator _sellerCreator;
-        private string _newSellerName;
         private readonly SingleSellerViewModel _viewModelSender;
         private readonly Func<ViewModelBase> _createSelerListViewModel;
+        private string _newSellerName;
         public ConfirmNewSellerCommand(NavigationService navigationService, SellerMVMCreator sellerCreator, string fullName, Func<ViewModelBase> createSellerListViewModel, SingleSellerViewModel parentViewModel)
         {
             _navigationService = navigationService;

@@ -1,18 +1,19 @@
-﻿using SimpleShop.Models.Models;
-using SimpleShop.Models.Services.MVMServices.MVMRemovers;
-using SimpleShop.Models.Services.Navigation;
-using SimpleShop.Models.ViewModels.DeleteViewModels;
-using SimpleShop.Models.ViewModels.ListViewModels;
-
-namespace SimpleShop.Models.Commands.DeleteCommands
+﻿namespace SimpleShop.Models.Commands.DeleteCommands
 {
+    using SimpleShop.Models.Services.MVMServices.MVMRemovers;
+    using SimpleShop.Models.Services.Navigation;
+    using SimpleShop.Models.ViewModels.DeleteViewModels;
+    using SimpleShop.Models.ViewModels.ListViewModels;
+    /// <summary>
+    /// Command that allows to delete Order
+    /// </summary>
     public class DeleteOrderCommand : CommandBase
     {
-        private NavigationService _navigationService;
-        private OrderMVMRemover _orderRemover;
+        private readonly NavigationService _navigationService;
+        private readonly OrderMVMRemover _orderRemover;
+        private readonly Func<OrderListViewModel> _createNewView;
+        private readonly OrderDeleteViewModel _parentViewModel;
         private int _id;
-        private Func<OrderListViewModel> _createNewView;
-        private OrderDeleteViewModel _parentViewModel;
 
         public DeleteOrderCommand(NavigationService navigationService, OrderMVMRemover orderRemover, int iD, Func<OrderListViewModel> createNewView, OrderDeleteViewModel parentViewModel)
         {

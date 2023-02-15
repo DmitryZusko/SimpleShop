@@ -4,29 +4,17 @@
 winexe
 C#
 .cs
-<<<<<<< HEAD
 C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\
-=======
-D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\
->>>>>>> af30d7d50c3c3888ee591d3e5da6783da5327751
 SimpleShop.UI
 none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
-<<<<<<< HEAD
 C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.UI\App.xaml
-12279679656
+11-1550650012
 
-16-958611309
+15-16843246
 229-2100480150
-=======
-D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\App.xaml
-12279679656
-
-16-958611309
-2291084073194
->>>>>>> af30d7d50c3c3888ee591d3e5da6783da5327751
-MainWindow.xaml;Views\AddViews\AddNewCustomerViewControl.xaml;Views\AddViews\AddNewOrderViewControl.xaml;Views\AddViews\AddNewSellerViewControl.xaml;Views\DeleteViews\CustomerDeleteControl.xaml;Views\DeleteViews\OrderDeleteControl.xaml;Views\DeleteViews\SellerDeleteControl.xaml;Views\ListViews\CustomerViewControl.xaml;Views\ListViews\OrderFullInfoViewControl.xaml;Views\ListViews\OrderViewControl.xaml;Views\ListViews\SellerViewControl.xaml;Views\TestWindow.xaml;
+MainWindow.xaml;Views\AddViews\AddNewCustomerViewControl.xaml;Views\AddViews\AddNewOrderViewControl.xaml;Views\AddViews\AddNewSellerViewControl.xaml;Views\DeleteViews\CustomerDeleteControl.xaml;Views\DeleteViews\OrderDeleteControl.xaml;Views\DeleteViews\SellerDeleteControl.xaml;Views\ListViews\CustomerViewControl.xaml;Views\ListViews\OrderFullInfoViewControl.xaml;Views\ListViews\OrderViewControl.xaml;Views\ListViews\SellerViewControl.xaml;
 
 True
 

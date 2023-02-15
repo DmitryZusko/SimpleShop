@@ -1,16 +1,14 @@
-﻿using SimpleShop.Models.Commands;
-using SimpleShop.Models.Commands.ConfirmCommands;
-using SimpleShop.Models.Commands.ShowCommands;
-using SimpleShop.Models.Models;
-using SimpleShop.Models.Services.MVMServices.MVMCreators;
-using SimpleShop.Models.Services.Navigation;
-using SimpleShop.Models.Stores;
-using SimpleShop.Models.ViewModels.ListViewModels;
-using System.Runtime.CompilerServices;
-using System.Windows.Input;
-
-namespace SimpleShop.Models.ViewModels.SingleEntityViewModel
+﻿namespace SimpleShop.Models.ViewModels.SingleEntityViewModel
 {
+    using SimpleShop.Models.Commands.ConfirmCommands;
+    using SimpleShop.Models.Commands.ShowCommands;
+    using SimpleShop.Models.Models;
+    using SimpleShop.Models.Services.MVMServices.MVMCreators;
+    using SimpleShop.Models.Services.Navigation;
+    using System.Windows.Input;
+    /// <summary>
+    /// ViewModel for a <c>AddNewSellerViewControl</c> View.
+    /// </summary>
     public class SingleSellerViewModel : ViewModelCommandsBase
     {
         private readonly SellerMVMCreator _sellerCreator;
@@ -20,9 +18,9 @@ namespace SimpleShop.Models.ViewModels.SingleEntityViewModel
         public string FullName
         {
             get { return _fullName; }
-            set 
-            { 
-                _fullName = value; 
+            set
+            {
+                _fullName = value;
                 OnPropertyChanged(nameof(_fullName));
             }
         }

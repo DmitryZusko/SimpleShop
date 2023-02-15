@@ -1,17 +1,12 @@
-﻿using SimpleShop.Models.Models;
-using SimpleShop.Models.Services.MVMServices.MVMRemovers;
-using SimpleShop.Models.Services.Navigation;
-using SimpleShop.Models.Stores;
-using SimpleShop.Models.ViewModels;
-using SimpleShop.Models.ViewModels.DeleteViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SimpleShop.Models.Commands.DeleteCommands
+﻿namespace SimpleShop.Models.Commands.DeleteCommands
 {
+    using SimpleShop.Models.Services.MVMServices.MVMRemovers;
+    using SimpleShop.Models.Services.Navigation;
+    using SimpleShop.Models.ViewModels;
+    using SimpleShop.Models.ViewModels.DeleteViewModels;
+    /// <summary>
+    /// Command that allows to delete Seller
+    /// </summary>
     internal class DeleteSellerCommand : CommandBase
     {
         private readonly NavigationService _navigationService;

@@ -1,24 +1,20 @@
-﻿using SimpleShop.Models.Models;
-using SimpleShop.Models.Services.MVMServices.MVMCreators;
-using SimpleShop.Models.Services.Navigation;
-using SimpleShop.Models.ViewModels;
-using SimpleShop.Models.ViewModels.ClassViewModels;
-using SimpleShop.Models.ViewModels.SingleEntityViewModel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SimpleShop.Models.Commands.ConfirmCommands
+﻿namespace SimpleShop.Models.Commands.ConfirmCommands
 {
+    using SimpleShop.Models.Services.MVMServices.MVMCreators;
+    using SimpleShop.Models.Services.Navigation;
+    using SimpleShop.Models.ViewModels;
+    using SimpleShop.Models.ViewModels.ClassViewModels;
+    using SimpleShop.Models.ViewModels.SingleEntityViewModel;
+    /// <summary>
+    /// Command that allows to add new Customer
+    /// </summary>
     public class ConfirmNewCustomerCommand : CommandBase
     {
-        private NavigationService _navigationService;
-        private CustomerMVMCreator _customerCreator;
+        private readonly NavigationService _navigationService;
+        private readonly CustomerMVMCreator _customerCreator;
+        private readonly Func<ViewModelBase> _createCustomerListViewModel;
+        private readonly SingleCustomerViewModel _parentViewModel;
         private string _company;
-        private Func<ViewModelBase> _createCustomerListViewModel;
-        private SingleCustomerViewModel _parentViewModel;
 
         public ConfirmNewCustomerCommand(NavigationService navigationService, CustomerMVMCreator customerCreator, string company, Func<ViewModelBase> createCustomerListViewModel, SingleCustomerViewModel parentViewModel)
         {

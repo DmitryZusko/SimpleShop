@@ -1,9 +1,10 @@
-﻿using SimpleShop.Models.Services.Navigation;
-using SimpleShop.Models.Stores;
-using SimpleShop.Models.ViewModels.ListViewModels;
-
-namespace SimpleShop.Models.Commands.ShowCommands
+﻿namespace SimpleShop.Models.Commands.ShowCommands
 {
+    using SimpleShop.Models.Services.Navigation;
+    using SimpleShop.Models.ViewModels.ListViewModels;
+    /// <summary>
+    /// Command that allows to create new <c>OrderFullInfoViewModel</c> view model
+    /// </summary>
     public class ShowOrderFullInfoCommand : CommandBase
     {
         private readonly NavigationService _navigationService;

@@ -142,7 +142,6 @@ C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-w
 C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\ListViews\OrderFullInfoViewControl.g.cs
 C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\ListViews\OrderViewControl.g.cs
 C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\ListViews\SellerViewControl.g.cs
-C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\TestWindow.g.cs
 C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\App.g.cs
 C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\SimpleShop.UI_MarkupCompile.cache
@@ -158,7 +157,6 @@ C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-w
 C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\ListViews\OrderFullInfoViewControl.baml
 C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\ListViews\OrderViewControl.baml
 C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\ListViews\SellerViewControl.baml
-C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\TestWindow.baml
 C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\SimpleShop.UI.g.resources
 C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\SimpleShop.UI.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\SimpleShop.UI.AssemblyInfoInputs.cache

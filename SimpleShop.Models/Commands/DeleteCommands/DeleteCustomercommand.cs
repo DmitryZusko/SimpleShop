@@ -1,26 +1,20 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using SimpleShop.Models.Models;
-using SimpleShop.Models.Services.MVMServices.MVMRemovers;
-using SimpleShop.Models.Services.Navigation;
-using SimpleShop.Models.Stores;
-using SimpleShop.Models.ViewModels.DeleteViewModels;
-using SimpleShop.Models.ViewModels.ListViewModels;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SimpleShop.Models.Commands.DeleteCommands
+﻿namespace SimpleShop.Models.Commands.DeleteCommands
 {
+    using SimpleShop.Models.Services.MVMServices.MVMRemovers;
+    using SimpleShop.Models.Services.Navigation;
+    using SimpleShop.Models.ViewModels.DeleteViewModels;
+    using SimpleShop.Models.ViewModels.ListViewModels;
+    using System.ComponentModel;
+    /// <summary>
+    /// Command that allows to delete Customer
+    /// </summary>
     public class DeleteCustomerCommand : CommandBase
     {
-        private NavigationService _navigationService;
-        private CustomerMVMRemover _customerRemover;
+        private readonly NavigationService _navigationService;
+        private readonly CustomerMVMRemover _customerRemover;
+        private readonly Func<CustomerListViewModel> _createNewView;
+        private readonly CustomerDeleteViewModel _parentViewModel;
         private int _id;
-        private Func<CustomerListViewModel> _createNewView;
-        private CustomerDeleteViewModel _parentViewModel;
 
         public DeleteCustomerCommand(NavigationService navigationService, CustomerMVMRemover customerRemover, int iD, Func<CustomerListViewModel> createNewView, CustomerDeleteViewModel parentViewModel)
         {

@@ -1,13 +1,10 @@
-﻿using SimpleShop.Models.Services.Navigation;
-using SimpleShop.Models.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SimpleShop.Models.Commands.DeleteCommands
+﻿namespace SimpleShop.Models.Commands.DeleteCommands
 {
+    using SimpleShop.Models.Services.Navigation;
+    using SimpleShop.Models.ViewModels;
+    /// <summary>
+    /// Command that allows to create new <c>SellerDeleteViewModel</c> view model
+    /// </summary>
     public class OpenSellerDeleteMenuCommand : CommandBase
     {
         private readonly NavigationService _navigationService;

@@ -1,14 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SimpleShop.Models.Models
+﻿namespace SimpleShop.Models.Models
 {
+    /// <summary>
+    /// Main outer model, that should incapsulate all inner logic from view models.
+    /// </summary>
     public class SimpleShopEntity
     {
-        private readonly GeneralLedger _generalLedger = new GeneralLedger();
+        private readonly GeneralLedger _generalLedger;
+        public SimpleShopEntity()
+        {
+            _generalLedger = new GeneralLedger();
+        }
 
         public List<Seller> GetSellersList()
         {
@@ -40,7 +41,7 @@ namespace SimpleShop.Models.Models
             _generalLedger.AddOrder(newOrder);
         }
 
-        internal void DeleteSeller(int id)
+        public void DeleteSeller(int id)
         {
             _generalLedger.DeleteSeller(id);
         }

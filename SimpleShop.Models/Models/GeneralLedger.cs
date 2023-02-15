@@ -1,9 +1,12 @@
-﻿using SimpleShop.Models.Services.DatabaseServices.DatabaseCreators;
-using SimpleShop.Models.Services.DatabaseServices.DatabaseProviders;
-using SimpleShop.Models.Services.DatabaseServices.DatabaseRemovers;
-
-namespace SimpleShop.Models.Models
+﻿namespace SimpleShop.Models.Models
 {
+    using SimpleShop.Models.Services.DatabaseServices.DatabaseCreators;
+    using SimpleShop.Models.Services.DatabaseServices.DatabaseProviders;
+    using SimpleShop.Models.Services.DatabaseServices.DatabaseRemovers;
+    /// <summary>
+    /// Main inner model, that contains all CRUD services.
+    /// Uses to separate DTO objects from ViewModel ones. 
+    /// </summary>
     public class GeneralLedger
     {
         private List<Seller> _sellers;

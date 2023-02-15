@@ -1,96 +1,90 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SimpleShop.Models.ViewModels.ClassViewModels
+﻿namespace SimpleShop.Models.ViewModels.ClassViewModels
 {
     public class FullOrderViewModel : ViewModelBase
     {
-		private string _id;
+        private string _id;
 
-		public string ID
-		{
-			get { return _id; }
-			set 
-			{ 
-				_id = value;
-				OnPropertyChanged(nameof(_id));
-			}
-		}
-
-		private string _orderDate;
-
-		public string OrderDate
-		{
-			get { return _orderDate; }
-			set 
-			{
-				_orderDate = value; 
-				OnPropertyChanged(nameof(_orderDate));
-			}
-		}
-
-		private string _amount;
-
-		public string Amount
+        public string ID
         {
-			get { return _amount; }
-			set 
-			{ 
-				_amount = value; 
-				OnPropertyChanged(nameof(_amount));
-			}
-		}
+            get { return _id; }
+            set
+            {
+                _id = value;
+                OnPropertyChanged(nameof(_id));
+            }
+        }
 
-		private string _sellerId;
+        private string _orderDate;
 
-		public string SellerID
+        public string OrderDate
         {
-			get { return _sellerId; }
-			set 
-			{ 
-				_sellerId = value; 
-				OnPropertyChanged(nameof(_sellerId));
-			}
-		}
+            get { return _orderDate; }
+            set
+            {
+                _orderDate = value;
+                OnPropertyChanged(nameof(_orderDate));
+            }
+        }
 
-		private string _sellerFullName;
+        private string _amount;
 
-		public string SellerFullName
+        public string Amount
         {
-			get { return _sellerFullName; }
-			set 
-			{ 
-				_sellerFullName = value; 
-				OnPropertyChanged(nameof(_sellerFullName));
-			}
-		}
+            get { return _amount; }
+            set
+            {
+                _amount = value;
+                OnPropertyChanged(nameof(_amount));
+            }
+        }
 
-		private string _customerId;
+        private string _sellerId;
 
-		public string CustomerID
+        public string SellerID
         {
-			get { return _customerId; }
-			set 
-			{ 
-				_customerId = value; 
-				OnPropertyChanged(nameof(_customerId));
-			}
-		}
+            get { return _sellerId; }
+            set
+            {
+                _sellerId = value;
+                OnPropertyChanged(nameof(_sellerId));
+            }
+        }
 
-		private string _customerCompany;
+        private string _sellerFullName;
 
-		public string CustomerCompany
+        public string SellerFullName
         {
-			get { return _customerCompany; }
-			set 
-			{ 
-				_customerCompany = value; 
-				OnPropertyChanged(nameof(_customerCompany));
-			}
-		}
+            get { return _sellerFullName; }
+            set
+            {
+                _sellerFullName = value;
+                OnPropertyChanged(nameof(_sellerFullName));
+            }
+        }
 
-	}
+        private string _customerId;
+
+        public string CustomerID
+        {
+            get { return _customerId; }
+            set
+            {
+                _customerId = value;
+                OnPropertyChanged(nameof(_customerId));
+            }
+        }
+
+        private string _customerCompany;
+
+        public string CustomerCompany
+        {
+            get { return _customerCompany; }
+            set
+            {
+                _customerCompany = value;
+                OnPropertyChanged(nameof(_customerCompany));
+            }
+        }
+
+    }
 }

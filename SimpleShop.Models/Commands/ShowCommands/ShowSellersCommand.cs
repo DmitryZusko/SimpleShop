@@ -1,14 +1,10 @@
-﻿using SimpleShop.Models.Services.Navigation;
-using SimpleShop.Models.Stores;
-using SimpleShop.Models.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SimpleShop.Models.Commands.ShowCommands
+﻿namespace SimpleShop.Models.Commands.ShowCommands
 {
+    using SimpleShop.Models.Services.Navigation;
+    using SimpleShop.Models.ViewModels;
+    /// <summary>
+    /// Command that allows to create new <c>SellerListViewModel</c> view model
+    /// </summary>
     public class ShowSellersCommand : CommandBase
     {
         private readonly NavigationService _navigationService;

@@ -1,8 +1,10 @@
-﻿using SimpleShop.Models.Services.Navigation;
-using SimpleShop.Models.ViewModels;
-
-namespace SimpleShop.Models.Commands.AddNewCommands
+﻿namespace SimpleShop.Models.Commands.AddNewCommands
 {
+    using SimpleShop.Models.Services.Navigation;
+    using SimpleShop.Models.ViewModels;
+    /// <summary>
+    /// Command that allows to create a new instance of <c>SingleCustomerViewModel</c> view model
+    /// </summary>
     public class AddNewCustomerCommand : CommandBase
     {
         private readonly NavigationService _navigationService;

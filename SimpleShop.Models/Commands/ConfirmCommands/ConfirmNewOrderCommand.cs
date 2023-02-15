@@ -1,19 +1,19 @@
-﻿using SimpleShop.Models.Models;
-using SimpleShop.Models.Services.MVMServices.MVMCreators;
-using SimpleShop.Models.Services.Navigation;
-using SimpleShop.Models.ViewModels;
-using SimpleShop.Models.ViewModels.ClassViewModels;
-using SimpleShop.Models.ViewModels.SingleEntityViewModel;
-
-namespace SimpleShop.Models.Commands.ConfirmCommands
+﻿namespace SimpleShop.Models.Commands.ConfirmCommands
 {
+    using SimpleShop.Models.Services.MVMServices.MVMCreators;
+    using SimpleShop.Models.Services.Navigation;
+    using SimpleShop.Models.ViewModels;
+    using SimpleShop.Models.ViewModels.SingleEntityViewModel;
+    /// <summary>
+    /// Command that allows to add new Order
+    /// </summary>
     public class ConfirmNewOrderCommand : CommandBase
     {
-        private NavigationService _navigationService;
-        private OrderMVMCreator _orderCreator;
+        private readonly NavigationService _navigationService;
+        private readonly OrderMVMCreator _orderCreator;
+        private readonly Func<ViewModelBase> _createOrderListViewModel;
+        private readonly SingleOrderViewModel _parentViewModel;
         private List<string> _orderInfo;
-        private Func<ViewModelBase> _createOrderListViewModel;
-        private SingleOrderViewModel _parentViewModel;
 
         public ConfirmNewOrderCommand(NavigationService navigationService, OrderMVMCreator orderCreator, List<string> orderInfo, Func<ViewModelBase> createOrderListViewModel, SingleOrderViewModel parentViewModel)
         {
@@ -28,7 +28,7 @@ namespace SimpleShop.Models.Commands.ConfirmCommands
         private void _parentViewModel_PropertyChanged(object? sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
             _orderInfo = new List<string>
-            { 
+            {
                 _parentViewModel.Amount.ToString("#.###"),
                 _parentViewModel.SellerID.ToString(),
                 _parentViewModel.CustomerID.ToString()

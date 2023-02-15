@@ -33,10 +33,5 @@ namespace SimpleShop.Models.ViewModels.ListViewModels
 
             Customers = _customerProvider.GetCustomers();
         }
-
-        public override bool NavigationStoreShouldStore()
-        {
-            return true;
-        }
     }
 }

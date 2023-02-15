@@ -3,6 +3,9 @@ using SimpleShop.Models.Services.Navigation;
 
 namespace SimpleShop.Models.ViewModels
 {
+    /// <summary>
+    /// Tracks active ViewModel.
+    /// </summary>
     public class MainViewModel : ViewModelCommandsBase
     {
         public ViewModelBase CurrentViewModel { get; set; }

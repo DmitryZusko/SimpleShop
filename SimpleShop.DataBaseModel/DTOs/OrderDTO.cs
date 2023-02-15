@@ -1,7 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-
-namespace SimpleShop.DataBaseModel.DTOs
+﻿namespace SimpleShop.DataBaseModel.DTOs
 {
+    using System.ComponentModel.DataAnnotations.Schema;
     public class OrderDTO
     {
         public int ID { get; set; }

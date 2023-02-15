@@ -2,7 +2,6 @@
 
 {
     using Microsoft.EntityFrameworkCore;
-    using Microsoft.Extensions.Options;
     using SimpleShop.DataBaseModel.DTOs;
 
     public class DatabaseContext : DbContext

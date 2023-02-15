@@ -1,10 +1,12 @@
-﻿using SimpleShop.DataBaseModel.DBContext;
-using SimpleShop.DataBaseModel.DTOs;
-using SimpleShop.Models.Models;
-
-namespace SimpleShop.Models.Services.DatabaseServices.DatabaseRemovers
+﻿namespace SimpleShop.Models.Services.DatabaseServices.DatabaseRemovers
 {
-    internal class SellerDatabaseRemover : DatabaseServiceBase
+    using SimpleShop.DataBaseModel.DBContext;
+    using SimpleShop.DataBaseModel.DTOs;
+    using SimpleShop.Models.Models;
+    /// <summary>
+    /// Allows to connect DataBase and remove certain seller from related table.
+    /// </summary>
+    public class SellerDatabaseRemover : DatabaseServiceBase
     {
         public void Remove(Seller seller)
         {

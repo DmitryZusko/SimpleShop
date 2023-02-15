@@ -1,15 +1,11 @@
-﻿using AutoMapper;
-using SimpleShop.Models.Models;
-using SimpleShop.Models.ViewModels.ClassViewModels;
-using SimpleShop.Models.ViewModels.ListViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SimpleShop.Models.Services.MVMServices
+﻿namespace SimpleShop.Models.Services.MVMServices
 {
+    using AutoMapper;
+    using SimpleShop.Models.Models;
+    using SimpleShop.Models.ViewModels.ClassViewModels;
+    /// <summary>
+    /// Base class for oll MVMServices. Contains mapping configurations that allows to map between Model and ViewModel.
+    /// </summary>
     public class MVMServiceBase : IMVMService
     {
         private readonly MapperConfiguration _config = new MapperConfiguration(cfg =>

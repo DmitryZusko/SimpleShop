@@ -1,10 +1,11 @@
-﻿using AutoMapper.QueryableExtensions;
-using SimpleShop.DataBaseModel.DBContext;
-using SimpleShop.Models.Models;
-using System.Linq;
-
-namespace SimpleShop.Models.Services.DatabaseServices.DatabaseProviders
+﻿namespace SimpleShop.Models.Services.DatabaseServices.DatabaseProviders
 {
+    using AutoMapper.QueryableExtensions;
+    using SimpleShop.DataBaseModel.DBContext;
+    using SimpleShop.Models.Models;
+    /// <summary>
+    /// Allows to connect DataBase and get sellers from related table.
+    /// </summary>
     public class SellersDatabaseProvider : DatabaseServiceBase
     {
         public List<Seller> LoadTable()

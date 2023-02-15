@@ -1,11 +1,8 @@
-﻿using SimpleShop.Models.ViewModels;
-
-namespace SimpleShop.Models.Stores
+﻿namespace SimpleShop.Models.Stores
 {
+    using SimpleShop.Models.ViewModels;
     public class NavigationStore
-    {
-        public ViewModelBase PreviousViewModel { get; set; }
-
+    { 
         private ViewModelBase _currentviewModel;
         public ViewModelBase CurrentViewModel
         {
@@ -16,7 +13,9 @@ namespace SimpleShop.Models.Stores
                 OnCurrentViewModelChanged();
             }
         }
-
+        /// <summary>
+        /// Invoking this event allows to change active view on MainView.
+        /// </summary>
         public event Action CurrentViewModelChanged;
 
         private void OnCurrentViewModelChanged()

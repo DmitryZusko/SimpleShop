@@ -1,15 +1,11 @@
-﻿using SimpleShop.Models.Models;
-using SimpleShop.Models.ViewModels.ClassViewModels;
-using SimpleShop.Models.ViewModels.ListViewModels;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SimpleShop.Models.Services.MVMServices.MVMProviders
+﻿namespace SimpleShop.Models.Services.MVMServices.MVMProviders
 {
+    using SimpleShop.Models.Models;
+    using SimpleShop.Models.ViewModels.ClassViewModels;
+    using System.Collections.ObjectModel;
+    /// <summary>
+    /// Loads orders from Model to ViewModel.
+    /// </summary>
     public class OrderMVMProvider : MVMServiceBase
     {
         private readonly SimpleShopEntity _simpleShop;

@@ -1,13 +1,10 @@
-﻿using SimpleShop.Models.Models;
-using SimpleShop.Models.Services.Validatiors;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SimpleShop.Models.Services.MVMServices.MVMRemovers
+﻿namespace SimpleShop.Models.Services.MVMServices.MVMRemovers
 {
+    using SimpleShop.Models.Models;
+    using SimpleShop.Models.Services.Validatiors;
+    /// <summary>
+    /// Hangs over deleting customer operation from ViewModel to Model.
+    /// </summary>
     public class CustomerMVMRemover
     {
         private readonly SimpleShopEntity _simpleShop;

@@ -1,15 +1,14 @@
-﻿using SimpleShop.Models.Commands.AddNewCommands;
-using SimpleShop.Models.Commands.DeleteCommands;
-using SimpleShop.Models.Commands.ShowCommands;
-using SimpleShop.Models.Models;
-using SimpleShop.Models.Services.MVMServices.MVMProviders;
-using SimpleShop.Models.Services.Navigation;
-using SimpleShop.Models.ViewModels.ClassViewModels;
-using System.Collections.ObjectModel;
-using System.Windows.Input;
-
-namespace SimpleShop.Models.ViewModels.ListViewModels
+﻿namespace SimpleShop.Models.ViewModels.ListViewModels
 {
+    using SimpleShop.Models.Commands.AddNewCommands;
+    using SimpleShop.Models.Commands.DeleteCommands;
+    using SimpleShop.Models.Commands.ShowCommands;
+    using SimpleShop.Models.Models;
+    using SimpleShop.Models.Services.MVMServices.MVMProviders;
+    using SimpleShop.Models.Services.Navigation;
+    using SimpleShop.Models.ViewModels.ClassViewModels;
+    using System.Collections.ObjectModel;
+    using System.Windows.Input;
     public class OrderListViewModel : ViewModelCommandsBase
     {
         private readonly OrderMVMProvider _orderProvider;
@@ -34,11 +33,6 @@ namespace SimpleShop.Models.ViewModels.ListViewModels
             DeleteOrderCommand = new OpenCustomerDeleteMenuCommand(_navigationService, CreateOrderDeleteViewModel);
 
             Orders = _orderProvider.GetOrders();
-        }
-
-        public override bool NavigationStoreShouldStore()
-        {
-            return true;
         }
     }
 }

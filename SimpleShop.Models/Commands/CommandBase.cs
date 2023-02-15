@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
-
-namespace SimpleShop.Models.Commands
+﻿namespace SimpleShop.Models.Commands
 {
+    using System.Windows.Input;
     public abstract class CommandBase : ICommand
     {
         public event EventHandler? CanExecuteChanged;

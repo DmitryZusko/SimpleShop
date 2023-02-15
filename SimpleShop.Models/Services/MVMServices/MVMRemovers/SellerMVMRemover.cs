@@ -1,8 +1,10 @@
-﻿using SimpleShop.Models.Models;
-using SimpleShop.Models.Services.Validatiors;
-
-namespace SimpleShop.Models.Services.MVMServices.MVMRemovers
+﻿namespace SimpleShop.Models.Services.MVMServices.MVMRemovers
 {
+    using SimpleShop.Models.Models;
+    using SimpleShop.Models.Services.Validatiors;
+    /// <summary>
+    /// Hangs over deleting seller operation from ViewModel to Model.
+    /// </summary>
     public class SellerMVMRemover : MVMServiceBase
     {
         private readonly SimpleShopEntity _simpleShop;

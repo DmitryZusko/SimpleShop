@@ -1,13 +1,10 @@
-﻿using SimpleShop.Models.Models;
-using SimpleShop.Models.ViewModels.ClassViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SimpleShop.Models.Services.MVMServices.MVMCreators
+﻿namespace SimpleShop.Models.Services.MVMServices.MVMCreators
 {
+    using SimpleShop.Models.Models;
+    using SimpleShop.Models.ViewModels.ClassViewModels;
+    /// <summary>
+    /// Hangs over adding new customer operation from ViewModel to Model.
+    /// </summary>
     public class CustomerMVMCreator : MVMServiceBase
     {
         private readonly SimpleShopEntity _simpleShop;

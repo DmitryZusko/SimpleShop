@@ -1,13 +1,18 @@
-﻿using AutoMapper.QueryableExtensions;
-using Microsoft.Data.SqlClient;
-using SimpleShop.DataBaseModel.DBContext;
-using SimpleShop.DataBaseModel.DTOs;
-using SimpleShop.Models.Models;
-
-namespace SimpleShop.Models.Services.DatabaseServices.DatabaseCreators
+﻿namespace SimpleShop.Models.Services.DatabaseServices.DatabaseCreators
 {
+    using AutoMapper.QueryableExtensions;
+    using SimpleShop.DataBaseModel.DBContext;
+    using SimpleShop.DataBaseModel.DTOs;
+    using SimpleShop.Models.Models;
+
     public class OrderDatabaseCreator : DatabaseServiceBase
     {
+        /// <summary>
+        /// Allows to connect DataBase and add new <c>OrderDTO</c> into related table.
+        /// </summary>
+        /// <returns>
+        /// Returns newly added <c>OrderDTO</c>, mapped to an <c>Order</c> type.
+        /// </returns>
         public Order AddNew(Order newOrder)
         {
             using (var context = new DatabaseContext())

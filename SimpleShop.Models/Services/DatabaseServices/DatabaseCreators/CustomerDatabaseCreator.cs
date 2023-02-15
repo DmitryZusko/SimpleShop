@@ -1,17 +1,18 @@
-﻿using AutoMapper.QueryableExtensions;
-using SimpleShop.DataBaseModel.DBContext;
-using SimpleShop.DataBaseModel.DTOs;
-using SimpleShop.Models.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SimpleShop.Models.Services.DatabaseServices.DatabaseCreators
+﻿namespace SimpleShop.Models.Services.DatabaseServices.DatabaseCreators
 {
+    using AutoMapper.QueryableExtensions;
+    using SimpleShop.DataBaseModel.DBContext;
+    using SimpleShop.DataBaseModel.DTOs;
+    using SimpleShop.Models.Models;
+
     public class CustomerDatabaseCreator : DatabaseServiceBase
     {
+        /// <summary>
+        /// Allows to connect DataBase and add new <c>CustomerDTO</c> into related table.
+        /// </summary>
+        /// <returns>
+        /// Returns newly added <c>CustomerDTO</c>, mapped to a <c>Customer</c> type.
+        /// </returns>
         public Customer AddNew(Customer newCustomer)
         {
             using (var context = new DatabaseContext())

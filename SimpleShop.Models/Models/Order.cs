@@ -1,6 +1,6 @@
 ﻿namespace SimpleShop.Models.Models
 {
-    public class Order : IModel
+    public class Order
     {
         public int ID { get; set; }
         public string OrderDate { get; set; }
