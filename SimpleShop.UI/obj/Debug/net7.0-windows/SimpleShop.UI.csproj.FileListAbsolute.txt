@@ -61,8 +61,6 @@ D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\bin\Debug\net7.0-windows\runtime
 D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\bin\Debug\net7.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\bin\Debug\net7.0-windows\SimpleShop.DataBaseModel.dll
 D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\bin\Debug\net7.0-windows\SimpleShop.DataBaseModel.pdb
-D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\TestWindow.g.cs
-D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\TestWindow.baml
 D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\bin\Debug\net7.0-windows\AutoMapper.dll
 D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\AddViews\AddNewCustomerViewControl.g.cs
 D:\Projects\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\Views\AddViews\AddNewOrderViewControl.g.cs
