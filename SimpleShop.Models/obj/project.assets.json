@@ -3231,19 +3231,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\googl\\.nuget\\packages\\": {}
+    "C:\\Users\\Prijom\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\SimpleShop\\SimpleShop\\SimpleShop.Models\\SimpleShop.Models.csproj",
+      "projectUniqueName": "C:\\Users\\Prijom\\Downloads\\SimpleShop\\SimpleShop\\SimpleShop.Models\\SimpleShop.Models.csproj",
       "projectName": "SimpleShop.Models",
-      "projectPath": "D:\\Projects\\SimpleShop\\SimpleShop\\SimpleShop.Models\\SimpleShop.Models.csproj",
-      "packagesPath": "C:\\Users\\googl\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\SimpleShop\\SimpleShop\\SimpleShop.Models\\obj\\",
+      "projectPath": "C:\\Users\\Prijom\\Downloads\\SimpleShop\\SimpleShop\\SimpleShop.Models\\SimpleShop.Models.csproj",
+      "packagesPath": "C:\\Users\\Prijom\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Prijom\\Downloads\\SimpleShop\\SimpleShop\\SimpleShop.Models\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\googl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Prijom\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3257,8 +3262,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\Projects\\SimpleShop\\SimpleShop\\SimpleShop.DataBaseModel\\SimpleShop.DataBaseModel.csproj": {
-              "projectPath": "D:\\Projects\\SimpleShop\\SimpleShop\\SimpleShop.DataBaseModel\\SimpleShop.DataBaseModel.csproj"
+            "C:\\Users\\Prijom\\Downloads\\SimpleShop\\SimpleShop\\SimpleShop.DataBaseModel\\SimpleShop.DataBaseModel.csproj": {
+              "projectPath": "C:\\Users\\Prijom\\Downloads\\SimpleShop\\SimpleShop\\SimpleShop.DataBaseModel\\SimpleShop.DataBaseModel.csproj"
             }
           }
         }

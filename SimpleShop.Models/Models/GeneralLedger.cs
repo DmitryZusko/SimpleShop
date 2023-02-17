@@ -88,5 +88,19 @@
             _orders.Remove(_orders.FirstOrDefault(o => o.ID == id));
         }
 
+        public int GetSellerCount(int id)
+        {
+            return _sellers.Where(s => s.ID == id).Count();
+        }
+
+        public int GetCustomerCount(int id)
+        {
+            return _customers.Where(s => s.ID == id).Count();
+        }
+
+        public int GetOrderCount(int id)
+        {
+            return _orders.Where(s => s.ID == id).Count();
+        }
     }
 }

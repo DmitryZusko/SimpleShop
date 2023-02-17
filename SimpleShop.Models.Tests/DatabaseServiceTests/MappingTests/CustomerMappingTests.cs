@@ -1,4 +1,4 @@
-﻿namespace SimpleShop.Models.Tests.DatabaseServiceTests.CreatorTests
+﻿namespace SimpleShop.Models.Tests.DatabaseServiceTests.MappingTests
 {
     using NUnit.Framework;
     using SimpleShop.DataBaseModel.DTOs;
@@ -6,7 +6,7 @@
     using SimpleShop.Models.Services.DatabaseServices.DatabaseCreators;
 
     [TestFixture]
-    public class CustomerDatabaseCreatorTests
+    public class CustomerMappingTests
     {
         [Test]
         public void Map_ShouldMapCustomerToCustomerDTO()

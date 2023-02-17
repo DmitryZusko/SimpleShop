@@ -17,15 +17,15 @@
             {
                 case ValidationMode.seller:
                     {
-                        return _simpleShop.GetSellersList().Where(s => s.ID == id).Count() == 1;
+                        return _simpleShop.GetSellerCount(id) == 1;
                     }
                 case ValidationMode.customer:
                     {
-                        return _simpleShop.GetCustomersList().Where(c => c.ID == id).Count() == 1;
+                        return _simpleShop.GetCustomerCount(id) == 1;
                     }
                 case ValidationMode.order:
                     {
-                        return _simpleShop.GetOrdersList().Where(o => o.ID == id).Count() == 1;
+                        return _simpleShop.GetOrderCount(id) == 1;
                     }
                 default:
                     return false;

@@ -166,3 +166,4 @@ C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-w
 C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\SimpleShop.UI.pdb
 C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\SimpleShop.UI.genruntimeconfig.cache
 C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.UI\obj\Debug\net7.0-windows\ref\SimpleShop.UI.dll
+C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.UI\bin\Debug\net7.0-windows\nunit.framework.dll

@@ -11,7 +11,7 @@
             _generalLedger = new GeneralLedger();
         }
 
-        public List<Seller> GetSellersList()
+        public virtual List<Seller> GetSellersList()
         {
             return _generalLedger.GetSellersList();
         }
@@ -54,6 +54,21 @@
         public void DeleteOrder(int id)
         {
             _generalLedger.DeleteOrder(id);
+        }
+
+        public virtual int GetSellerCount(int id)
+        {
+            return _generalLedger.GetSellerCount(id);
+        }
+
+        public virtual int GetCustomerCount(int id)
+        {
+            return _generalLedger.GetCustomerCount(id);
+        }
+
+        public virtual int GetOrderCount(int id)
+        {
+            return _generalLedger.GetOrderCount(id);
         }
     }
 }

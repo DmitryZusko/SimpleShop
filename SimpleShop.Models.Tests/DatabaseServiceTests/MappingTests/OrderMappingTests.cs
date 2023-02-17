@@ -1,4 +1,4 @@
-﻿namespace SimpleShop.Models.Tests.DatabaseServiceTests.CreatorTests
+﻿namespace SimpleShop.Models.Tests.DatabaseServiceTests.MappingTests
 {
     using NUnit.Framework;
     using SimpleShop.DataBaseModel.DTOs;
@@ -6,10 +6,10 @@
     using SimpleShop.Models.Services.DatabaseServices.DatabaseCreators;
 
     [TestFixture]
-    public class OrderDatabaseCreatorTests
+    public class OrderMappingTests
     {
         [Test]
-        public void Map_ShouldMapOrderToOrderDTO() 
+        public void Map_ShouldMapOrderToOrderDTO()
         {
             var orderCreator = new OrderDatabaseCreator();
             var order = new Order
@@ -18,9 +18,7 @@
                 OrderDate = "Feb 12 2023 5:31PM",
                 Amount = 10.10m,
                 SellerId = 1,
-                SellerFullName = "Test Seller",
                 CustomerId = 1,
-                CustomerCompany = "Test Customer"
             };
 
             var expected = new OrderDTO
@@ -40,8 +38,6 @@
             Assert.AreEqual(expected.Amount, actual.Amount);
             Assert.AreEqual(expected.SellerID, actual.SellerID);
             Assert.AreEqual(expected.CustomerID, actual.CustomerID);
-
-
         }
     }
 }
