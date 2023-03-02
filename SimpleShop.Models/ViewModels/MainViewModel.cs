@@ -9,7 +9,7 @@ namespace SimpleShop.Models.ViewModels
     public class MainViewModel : ViewModelCommandsBase
     {
         public ViewModelBase CurrentViewModel { get; set; }
-        public MainViewModel(NavigationService navigationService, SimpleShopEntity simpleShop) : base(navigationService, simpleShop)
+        public MainViewModel(NavigationService navigationService, ISimpleShopEntity simpleShop) : base(navigationService, simpleShop)
         {
             _navigationService.CreateViewModel(CreateSellerListViewModel);
             CurrentViewModel = _navigationService.GetCurrentViewmodel();

@@ -1,6 +1,7 @@
 ﻿namespace SimpleShop.Models.Tests.ValidatorsTests
 {
     using Autofac.Extras.Moq;
+    using Moq;
     using NUnit.Framework;
     using SimpleShop.Models.Models;
     using SimpleShop.Models.Services.Validatiors;
@@ -15,7 +16,7 @@
         {
             using (var mock = AutoMock.GetLoose())
             {
-                mock.Mock<SimpleShopEntity>()
+                mock.Mock<ISimpleShopEntity>()
                     .Setup(x => x.GetSellerCount(id))
                     .Returns(ValidatorsResult(id));
 
@@ -34,7 +35,7 @@
         {
             using (var mock = AutoMock.GetLoose())
             {
-                mock.Mock<SimpleShopEntity>()
+                mock.Mock<ISimpleShopEntity>()
                     .Setup(x => x.GetCustomerCount(id))
                     .Returns(ValidatorsResult(id));
 
@@ -53,7 +54,7 @@
         {
             using (var mock = AutoMock.GetLoose())
             {
-                mock.Mock<SimpleShopEntity>()
+                mock.Mock<ISimpleShopEntity>()
                     .Setup(x => x.GetOrderCount(id))
                     .Returns(ValidatorsResult(id));
 

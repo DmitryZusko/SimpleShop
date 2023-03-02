@@ -8,9 +8,9 @@
     /// </summary>
     public class OrderMVMProvider : MVMServiceBase
     {
-        private readonly SimpleShopEntity _simpleShop;
+        private readonly ISimpleShopEntity _simpleShop;
 
-        public OrderMVMProvider(SimpleShopEntity simpleShop)
+        public OrderMVMProvider(ISimpleShopEntity simpleShop)
         {
             _simpleShop = simpleShop;
         }

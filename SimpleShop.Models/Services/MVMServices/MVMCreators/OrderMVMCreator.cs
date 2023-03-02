@@ -8,10 +8,10 @@
     /// </summary>
     public class OrderMVMCreator : MVMServiceBase
     {
-        private readonly SimpleShopEntity _simpleShop;
+        private readonly ISimpleShopEntity _simpleShop;
         private readonly IdentificatorValidator _idValidator;
 
-        public OrderMVMCreator(SimpleShopEntity simpleShop)
+        public OrderMVMCreator(ISimpleShopEntity simpleShop)
         {
             _simpleShop = simpleShop;
             _idValidator = new IdentificatorValidator(_simpleShop);

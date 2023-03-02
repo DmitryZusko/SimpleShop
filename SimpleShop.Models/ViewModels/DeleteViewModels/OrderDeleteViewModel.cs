@@ -24,7 +24,7 @@
 
         public ICommand DeleteOrderCommand { get; }
         public ICommand CancelCommand { get; }
-        public OrderDeleteViewModel(NavigationService navigationService, SimpleShopEntity simpleShop) : base(navigationService, simpleShop)
+        public OrderDeleteViewModel(NavigationService navigationService, ISimpleShopEntity simpleShop) : base(navigationService, simpleShop)
         {
             _orderRemover = new OrderMVMRemover(_simpleShop);
 

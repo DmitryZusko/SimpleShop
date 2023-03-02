@@ -13,7 +13,7 @@
 
         public ObservableCollection<FullOrderViewModel> Orders { get; set; }
         public ICommand CancelCommand { get; }
-        public OrderFullInfoViewModel(NavigationService navigationService, SimpleShopEntity simpleShop) : base(navigationService, simpleShop)
+        public OrderFullInfoViewModel(NavigationService navigationService, ISimpleShopEntity simpleShop) : base(navigationService, simpleShop)
         {
             _orderProvider = new OrderMVMProvider(_simpleShop);
 

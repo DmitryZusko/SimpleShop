@@ -3,15 +3,15 @@
     /// <summary>
     /// Main outer model, that should incapsulate all inner logic from view models.
     /// </summary>
-    public class SimpleShopEntity
+    public class SimpleShopEntity : ISimpleShopEntity
     {
-        private readonly GeneralLedger _generalLedger;
-        public SimpleShopEntity()
+        private readonly IGeneralLedger _generalLedger;
+        public SimpleShopEntity(IGeneralLedger generalLedger)
         {
-            _generalLedger = new GeneralLedger();
+            _generalLedger = generalLedger;
         }
 
-        public virtual List<Seller> GetSellersList()
+        public List<Seller> GetSellersList()
         {
             return _generalLedger.GetSellersList();
         }

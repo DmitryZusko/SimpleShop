@@ -7,7 +7,7 @@
     /// Main inner model, that contains all CRUD services.
     /// Uses to separate DTO objects from ViewModel ones. 
     /// </summary>
-    public class GeneralLedger
+    public class GeneralLedger : IGeneralLedger
     {
         private List<Seller> _sellers;
         private List<Customer> _customers;

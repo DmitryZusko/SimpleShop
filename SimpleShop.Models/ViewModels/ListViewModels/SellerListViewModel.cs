@@ -22,7 +22,7 @@
         public ICommand AddNewSellerCommand { get; }
         public ICommand DeleteSellerCommand { get; }
 
-        public SellerListViewModel(NavigationService navigationService, SimpleShopEntity simpleShop) : base(navigationService, simpleShop)
+        public SellerListViewModel(NavigationService navigationService, ISimpleShopEntity simpleShop) : base(navigationService, simpleShop)
         {
             _sellerProvider = new SellerMVMProvider(_simpleShop);
 

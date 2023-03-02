@@ -16,5 +16,5 @@ C:\Users\Prijom\Downloads\SimpleShop\SimpleShop\SimpleShop.UI\App.xaml
 230-2000963126
 MainWindow.xaml;Views\AddViews\AddNewCustomerViewControl.xaml;Views\AddViews\AddNewOrderViewControl.xaml;Views\AddViews\AddNewSellerViewControl.xaml;Views\DeleteViews\CustomerDeleteControl.xaml;Views\DeleteViews\OrderDeleteControl.xaml;Views\DeleteViews\SellerDeleteControl.xaml;Views\ListViews\CustomerViewControl.xaml;Views\ListViews\OrderFullInfoViewControl.xaml;Views\ListViews\OrderViewControl.xaml;Views\ListViews\SellerViewControl.xaml;
 
-True
+False
 

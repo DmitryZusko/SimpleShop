@@ -21,5 +21,18 @@ namespace SimpleShop.Models.Tests.DatabaseServiceTests.MappingTests
             Assert.IsTrue(actual is SellerDTO);
             Assert.IsTrue(expected.ID == actual.ID && expected.FullName == actual.FullName);
         }
+
+        [Test]
+        public void Map_ShouldMapSellerIdToSellerDTOId()
+        {
+            var seller = new Seller { ID = 1, FullName = "Test Name" };
+            var sellerCreator = new SellerDatabaseCreator();
+
+            var expected = new SellerDTO { ID = seller.ID, FullName = seller.FullName };
+
+            var actual = sellerCreator.Map<Seller, SellerDTO>(seller);
+
+            Assert.IsTrue(expected.ID == actual.ID && expected.FullName == actual.FullName);
+        }
     }
 }

@@ -21,7 +21,7 @@
         public ICommand AddNewOrderCommand { get; }
         public ICommand DeleteOrderCommand { get; }
 
-        public OrderListViewModel(NavigationService navigationService, SimpleShopEntity simpleShop) : base(navigationService, simpleShop)
+        public OrderListViewModel(NavigationService navigationService, ISimpleShopEntity simpleShop) : base(navigationService, simpleShop)
         {
             _orderProvider = new OrderMVMProvider(_simpleShop);
 

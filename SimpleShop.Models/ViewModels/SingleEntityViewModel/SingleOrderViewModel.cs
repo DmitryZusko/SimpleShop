@@ -55,7 +55,7 @@
 
         public ICommand SubmitCommand { get; }
         public ICommand CancelCommand { get; }
-        public SingleOrderViewModel(NavigationService navigationService, SimpleShopEntity simpleShop) : base(navigationService, simpleShop)
+        public SingleOrderViewModel(NavigationService navigationService, ISimpleShopEntity simpleShop) : base(navigationService, simpleShop)
         {
             _orderCreator = new OrderMVMCreator(_simpleShop);
 

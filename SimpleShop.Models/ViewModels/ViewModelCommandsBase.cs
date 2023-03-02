@@ -11,10 +11,10 @@
     /// </summary>
     public abstract class ViewModelCommandsBase : ViewModelBase
     {
-        protected SimpleShopEntity _simpleShop;
+        protected ISimpleShopEntity _simpleShop;
         protected NavigationService _navigationService;
 
-        protected ViewModelCommandsBase(NavigationService navigationService, SimpleShopEntity simpleShop)
+        protected ViewModelCommandsBase(NavigationService navigationService, ISimpleShopEntity simpleShop)
         {
             _simpleShop = simpleShop;
             _navigationService = navigationService;

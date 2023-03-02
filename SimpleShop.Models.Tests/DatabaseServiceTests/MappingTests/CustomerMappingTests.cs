@@ -22,5 +22,31 @@
             Assert.AreEqual(expected.ID, actual.ID);
             Assert.AreEqual(expected.Company, actual.Company);
         }
+
+        [Test]
+        public void Map_ShouldMapCustomerIdToCustomerDTOId()
+        {
+            var customerCreator = new CustomerDatabaseCreator();
+            var customer = new Customer { ID = 1, Company = "Test Company" };
+
+            var expected = new CustomerDTO { ID = customer.ID, Company = customer.Company };
+
+            var actual = customerCreator.Map<Customer, CustomerDTO>(customer);
+
+            Assert.AreEqual(expected.ID, actual.ID);
+        }
+
+        [Test]
+        public void Map_ShouldMapCustomersCompanyToCustomerDTOCompany()
+        {
+            var customerCreator = new CustomerDatabaseCreator();
+            var customer = new Customer { ID = 1, Company = "Test Company" };
+
+            var expected = new CustomerDTO { ID = customer.ID, Company = customer.Company };
+
+            var actual = customerCreator.Map<Customer, CustomerDTO>(customer);
+
+            Assert.AreEqual(expected.Company, actual.Company);
+        }
     }
 }

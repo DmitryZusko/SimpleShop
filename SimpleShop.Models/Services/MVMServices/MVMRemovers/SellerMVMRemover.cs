@@ -7,10 +7,10 @@
     /// </summary>
     public class SellerMVMRemover : MVMServiceBase
     {
-        private readonly SimpleShopEntity _simpleShop;
+        private readonly ISimpleShopEntity _simpleShop;
         private readonly IdentificatorValidator _idValidatior;
 
-        public SellerMVMRemover(SimpleShopEntity simpleShop)
+        public SellerMVMRemover(ISimpleShopEntity simpleShop)
         {
             _simpleShop = simpleShop;
             _idValidatior = new IdentificatorValidator(_simpleShop);

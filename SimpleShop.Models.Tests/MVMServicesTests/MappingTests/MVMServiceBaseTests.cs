@@ -30,6 +30,18 @@ namespace SimpleShop.Models.Tests.MVMServicesTests.MappingTests
             Assert.IsTrue(expected.ID == actual.ID && expected.FullName == actual.FullName);
         }
 
+        public void Map_ShoulMapSellerIdToSellerViewModelId()
+        {
+            var seller = new Seller { ID = 1, FullName = "Test Name" };
+            var service = new MVMServiceBase();
+
+            var expected = new SellerViewModel { ID = seller.ID, FullName = seller.FullName };
+
+            var actual = service.Map<Seller, SellerViewModel>(seller);
+
+            Assert.IsTrue(expected.ID == actual.ID && expected.FullName == actual.FullName);
+        }
+
         [Test]
         public void Map_ShouldMapSellerViewModelToSeller()
         {
@@ -41,6 +53,19 @@ namespace SimpleShop.Models.Tests.MVMServicesTests.MappingTests
             var actual = service.Map<SellerViewModel, Seller>(sellerVM);
 
             Assert.IsTrue(actual is Seller);
+            Assert.IsTrue(actual.ID == expected.ID && actual.FullName == expected.FullName);
+        }
+
+        [Test]
+        public void Map_ShouldMapSellerViewModelIdToSellerId()
+        {
+            var sellerVM = new SellerViewModel { ID = 1, FullName = "Test Name" };
+            var service = new MVMServiceBase();
+
+            var expected = new Seller { ID = sellerVM.ID, FullName = sellerVM.FullName };
+
+            var actual = service.Map<SellerViewModel, Seller>(sellerVM);
+
             Assert.IsTrue(actual.ID == expected.ID && actual.FullName == expected.FullName);
         }
     }

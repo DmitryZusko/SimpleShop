@@ -12,11 +12,11 @@ namespace SimpleShop.UI
     {
         private readonly ViewModelBase _mainViewModel;
         private readonly NavigationService _navigationService;
-        private readonly SimpleShopEntity _simpleShop;
+        private readonly ISimpleShopEntity _simpleShop;
         public App()
         {
             _navigationService = new NavigationService();
-            _simpleShop = new SimpleShopEntity();
+            _simpleShop = new SimpleShopEntity(new GeneralLedger());
             _navigationService = new NavigationService();
             _mainViewModel = new MainViewModel(_navigationService, _simpleShop);
         }

@@ -7,9 +7,9 @@
     /// </summary>
     public class SellerMVMCreator : MVMServiceBase
     {
-        private readonly SimpleShopEntity _simpleShop;
+        private readonly ISimpleShopEntity _simpleShop;
 
-        public SellerMVMCreator(SimpleShopEntity simpleShop)
+        public SellerMVMCreator(ISimpleShopEntity simpleShop)
         {
             _simpleShop = simpleShop;
         }

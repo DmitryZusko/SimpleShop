@@ -6,8 +6,8 @@
     /// </summary>
     public partial class IdentificatorValidator
     {
-        private readonly SimpleShopEntity _simpleShop;
-        public IdentificatorValidator(SimpleShopEntity simpleShop)
+        private readonly ISimpleShopEntity _simpleShop;
+        public IdentificatorValidator(ISimpleShopEntity simpleShop)
         {
             _simpleShop = simpleShop;
         }

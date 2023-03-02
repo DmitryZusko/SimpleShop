@@ -29,7 +29,7 @@
         public ICommand SubmitCommand { get; }
         public ICommand CancelCommand { get; }
 
-        public SingleSellerViewModel(NavigationService navigationService, SimpleShopEntity simpleShop) : base(navigationService, simpleShop)
+        public SingleSellerViewModel(NavigationService navigationService, ISimpleShopEntity simpleShop) : base(navigationService, simpleShop)
         {
             _sellerCreator = new SellerMVMCreator(_simpleShop);
 

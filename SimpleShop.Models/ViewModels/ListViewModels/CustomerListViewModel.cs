@@ -21,7 +21,7 @@ namespace SimpleShop.Models.ViewModels.ListViewModels
         public ICommand AddNewCustomerCommand { get; }
         public ICommand DeleteCustomerCommand { get; }
 
-        public CustomerListViewModel(NavigationService navigationService, SimpleShopEntity simpleShop) : base(navigationService, simpleShop)
+        public CustomerListViewModel(NavigationService navigationService, ISimpleShopEntity simpleShop) : base(navigationService, simpleShop)
         {
             _customerProvider = new CustomerMVMProvider(_simpleShop);
 

@@ -28,7 +28,7 @@
         public ICommand SubmitCommand { get; }
         public ICommand CancelCommand { get; }
 
-        public SingleCustomerViewModel(NavigationService navigationService, SimpleShopEntity simpleShop) : base(navigationService, simpleShop)
+        public SingleCustomerViewModel(NavigationService navigationService, ISimpleShopEntity simpleShop) : base(navigationService, simpleShop)
         {
             _customerCreator = new CustomerMVMCreator(_simpleShop);
 
